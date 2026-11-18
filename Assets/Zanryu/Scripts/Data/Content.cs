@@ -15,6 +15,8 @@ namespace Zanryu
         public static List<HorrorEvent> Events = new List<HorrorEvent>();
         public static GameConfig Config = new GameConfig();
         public static MonologueData Monologues = new MonologueData();
+        public static WebData Web = new WebData();
+        static readonly Dictionary<string, WebPage> pageById = new Dictionary<string, WebPage>();
 
         static readonly Dictionary<string, FileEntry> fileById = new Dictionary<string, FileEntry>();
         static readonly Dictionary<string, ChatThread> threadById = new Dictionary<string, ChatThread>();
@@ -26,6 +28,7 @@ namespace Zanryu
             Events = LoadJson<EventList>("Content/events")?.events ?? new List<HorrorEvent>();
             Config = LoadJson<GameConfig>("Content/config") ?? new GameConfig();
             Monologues = LoadJson<MonologueData>("Content/monologues") ?? new MonologueData();
+            Web = LoadJson<WebData>("Content/web") ?? new WebData();
             Normalize();
 
             fileById.Clear();
@@ -35,6 +38,8 @@ namespace Zanryu
                 if (fileById.ContainsKey(f.id)) Debug.LogWarning("[Content] ファイルIDが重複しています: " + f.id);
                 else fileById[f.id] = f;
             }
+            pageById.Clear();
+            foreach (var p in Web.pages) if (!string.IsNullOrEmpty(p.id)) pageById[p.id] = p;
             threadById.Clear();
             foreach (var t in Threads)
                 if (!string.IsNullOrEmpty(t.id)) threadById[t.id] = t;
@@ -44,6 +49,9 @@ namespace Zanryu
 
         public static FileEntry GetFile(string id) =>
             id != null && fileById.TryGetValue(id, out var f) ? f : null;
+
+        public static WebPage GetPage(string id) =>
+            id != null && pageById.TryGetValue(id, out var p) ? p : null;
 
         public static ChatThread GetThread(string id) =>
             id != null && threadById.TryGetValue(id, out var t) ? t : null;
@@ -67,6 +75,24 @@ namespace Zanryu
                 foreach (var n in t.nodes) if (n.choices == null) n.choices = new List<ChatChoice>();
             }
             foreach (var e in Events) if (e.actions == null) e.actions = new List<EventAction>();
+            if (Web.pages == null) Web.pages = new List<WebPage>();
+            if (Web.searches == null) Web.searches = new List<WebSearch>();
+            if (Web.trending == null) Web.trending = new List<string>();
+            if (Web.ads == null) Web.ads = new List<string>();
+            if (Web.fallback == null) Web.fallback = new List<string>();
+            foreach (var p in Web.pages)
+            {
+                if (p.tags == null) p.tags = new List<string>();
+                if (p.links == null) p.links = new List<string>();
+                if (p.react == null) p.react = new List<string>();
+                if (p.comments == null) p.comments = new List<string>();
+            }
+            foreach (var s in Web.searches)
+            {
+                if (s.keywords == null) s.keywords = new List<string>();
+                if (s.results == null) s.results = new List<string>();
+            }
+
             var m = Monologues;
             if (m.intros == null) m.intros = new List<MonologueEntry>();
             if (m.reactions == null) m.reactions = new List<MonologueEntry>();

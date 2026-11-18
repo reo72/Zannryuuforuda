@@ -354,6 +354,39 @@
           "a": "……デスクトップに、見覚えのないファイルがある。"
         }
       ]
+    },
+    {
+      "id": "d4_wallpaper",
+      "trigger": "dayStart",
+      "day": 4,
+      "actions": [
+        {
+          "type": "wallpaper",
+          "a": "room_window_d4"
+        }
+      ]
+    },
+    {
+      "id": "d6_wallpaper",
+      "trigger": "dayStart",
+      "day": 6,
+      "actions": [
+        {
+          "type": "wallpaper",
+          "a": "room_window_d6"
+        }
+      ]
+    },
+    {
+      "id": "d7_wallpaper",
+      "trigger": "dayStart",
+      "day": 7,
+      "actions": [
+        {
+          "type": "wallpaper",
+          "a": "room_window_d7"
+        }
+      ]
     }
   ]
 }

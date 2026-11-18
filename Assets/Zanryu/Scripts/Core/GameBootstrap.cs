@@ -32,12 +32,17 @@ namespace Zanryu
 
         static void EnsureCamera()
         {
-            if (Camera.main != null) return;
-            var cam = new GameObject("Main Camera").AddComponent<Camera>();
-            cam.tag = "MainCamera";
-            cam.clearFlags = CameraClearFlags.SolidColor;
-            cam.backgroundColor = Color.black;
-            cam.cullingMask = 0;
+            if (Camera.main == null)
+            {
+                var c = new GameObject("Main Camera").AddComponent<Camera>();
+                c.tag = "MainCamera";
+                c.clearFlags = CameraClearFlags.SolidColor;
+                c.backgroundColor = Color.black;
+                c.cullingMask = 0;
+            }
+            // 音を鳴らすには AudioListener（耳）が1つ必要。空のシーンには無いので付ける
+            if (FindAnyObjectByType<AudioListener>() == null)
+                Camera.main.gameObject.AddComponent<AudioListener>();
         }
 
         static void EnsureEventSystem()

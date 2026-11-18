@@ -5,7 +5,7 @@ namespace Zanryu
 {
     [Serializable] public class StringPair { public string key; public string value; }
     [Serializable] public class OpenLog { public int day; public string fileId; public float time; }
-    [Serializable] public class ChatLine { public string thread; public string from; public string text; public int day; }
+    [Serializable] public class ChatLine { public string thread; public string from; public string text; public int day; public string time; }
     [Serializable] public class WaitingChoice { public string thread; public string node; public int day; }
 
     /// <summary>1周分の進行データ（プロファイルごとに save_main.json / save_yui.json に保存）</summary>
@@ -42,6 +42,7 @@ namespace Zanryu
         public float seVolume = 0.8f;                      // 効果音
         public float ambientVolume = 0.8f;                 // 環境音（ファンの音など）
         public bool fullscreen = true;                     // 画面モード
-        public int textSpeed = 1;                          // 文字の速さ 0=ゆっくり 1=ふつう 2=はやい
+        public int textSpeed = 1;
+        public int version;                                // セーブ形式のバージョン（古いセーブの補正用）                          // 文字の速さ 0=ゆっくり 1=ふつう 2=はやい
     }
 }

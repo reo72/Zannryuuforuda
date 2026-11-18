@@ -125,7 +125,7 @@ namespace Zanryu
 
         void AddLine(ChatThread t, string from, string text)
         {
-            gm.State.chatHistory.Add(new ChatLine { thread = t.id, from = from, text = text, day = gm.State.day });
+            gm.State.chatHistory.Add(new ChatLine { thread = t.id, from = from, text = text, day = gm.State.day, time = gm.ClockText() });
             if (from != "me" && !gm.State.unread.Contains(t.id)) gm.State.unread.Add(t.id);
             gm.Save();
         }

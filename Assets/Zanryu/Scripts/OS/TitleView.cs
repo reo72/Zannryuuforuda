@@ -150,10 +150,22 @@ namespace Zanryu
                     var body = UIKit.Label(card.transform, TextResolver.Resolve(e.text), 16, new Color(0.74f, 0.75f, 0.78f));
                     body.lineSpacing = 4;
                 }
-                else
+                else if (!string.IsNullOrEmpty(e.hint))
                 {
-                    var hint = string.IsNullOrEmpty(e.hint) ? "（ヒントなし）" : "ヒント：" + e.hint;
-                    UIKit.Label(card.transform, hint, 16, new Color(0.62f, 0.56f, 0.44f));
+                    // ヒントは、押したときだけ表示する（ネタバレを見たくない人のため）
+                    var hint = UIKit.Label(card.transform, "ヒント：" + e.hint, 16, new Color(0.62f, 0.56f, 0.44f));
+                    hint.gameObject.SetActive(false);
+                    var toggle = UIKit.Label(card.transform, "▶ ヒントを表示", 15, new Color(0.45f, 0.62f, 0.85f));
+                    toggle.raycastTarget = true;
+                    var click = toggle.gameObject.AddComponent<ClickHandler>();
+                    click.Single = () =>
+                    {
+                        bool show = !hint.gameObject.activeSelf;
+                        hint.gameObject.SetActive(show);
+                        toggle.text = show ? "▼ ヒントをかくす" : "▶ ヒントを表示";
+                        OSRoot.I.PlaySound("click", 0.5f);
+                    };
+                    click.Double = click.Single;
                 }
             }
         }

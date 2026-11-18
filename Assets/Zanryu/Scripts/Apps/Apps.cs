@@ -31,6 +31,7 @@ namespace Zanryu
                 case "explorer": ExplorerApp.Open(string.IsNullOrEmpty(f.content) ? "root" : f.content); break;
                 case "chat": ChatApp.Open(); break;
                 case "taskmgr": TaskManagerApp.Open(); break;
+                case "browser": BrowserApp.Open(); break;
                 default: Debug.LogWarning($"[Apps] 未対応のアプリ: {f.app}"); break;
             }
         }
@@ -97,20 +98,41 @@ namespace Zanryu
                 var t = UIKit.Label(win.Content, info, 17, Theme.Text, TextAnchor.UpperLeft);
                 UIKit.Stretch(t.rectTransform, 20, 20, 20, 70);
 
-                var play = UIKit.Button(win.Content, "▶ 再生", () => { if (clip != null) OSRoot.I.PlayClip(clip); });
+                // 逆再生用に別素材（asset名_rev）があればそちらを使う。なければ計算で逆向きにする
+                var revClip = string.IsNullOrEmpty(asset) ? null : Resources.Load<AudioClip>("Audio/" + asset + "_rev");
+                string playedFlag = "played_" + f.id;
+                GameObject revGo = null;
+
+                var play = UIKit.Button(win.Content, "▶ 再生", () =>
+                {
+                    if (clip != null) OSRoot.I.PlayClip(clip);
+                    if (GM.HasFlag(playedFlag) || revGo == null) return;
+                    GM.SetFlag(playedFlag);
+                    // 1回聞き終わってから「逆再生」が出てくる
+                    win.StartCoroutine(ShowAfter(revGo, clip != null ? clip.length + 0.3f : 0.5f));
+                });
                 UIKit.Place((RectTransform)play.transform, new Vector2(0, 0), new Vector2(0, 0), new Vector2(20, 16), new Vector2(140, 38));
 
                 // 逆再生：謎解きに使う（押すと「reversed_ファイルID」フラグが立つ）
                 var rev = UIKit.Button(win.Content, "◀ 逆再生", () =>
                 {
-                    if (clip != null) OSRoot.I.PlayClip(Reverse(clip));
+                    if (revClip != null) OSRoot.I.PlayClip(revClip);
+                    else if (clip != null) OSRoot.I.PlayClip(Reverse(clip));
                     GM.SetFlag("reversed_" + f.id);
                 });
                 UIKit.Place((RectTransform)rev.transform, new Vector2(0, 0), new Vector2(0, 0), new Vector2(170, 16), new Vector2(140, 38));
+                revGo = rev.gameObject;
+                revGo.SetActive(GM.HasFlag(playedFlag));
             });
         }
 
         /// <summary>音声を逆向きにした新しいクリップを作る（Load Type が Decompress On Load の音声のみ）</summary>
+        static System.Collections.IEnumerator ShowAfter(GameObject go, float sec)
+        {
+            yield return new WaitForSeconds(sec);
+            if (go != null) go.SetActive(true);
+        }
+
         static AudioClip Reverse(AudioClip c)
         {
             try

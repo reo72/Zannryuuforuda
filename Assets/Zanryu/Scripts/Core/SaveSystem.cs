@@ -33,7 +33,24 @@ namespace Zanryu
             if (File.Exists(p)) File.Delete(p);
         }
 
-        public static GlobalSave LoadGlobal() => Read<GlobalSave>(GlobalPath) ?? new GlobalSave();
+        const int GlobalVersion = 2;
+
+        public static GlobalSave LoadGlobal()
+        {
+            var g = Read<GlobalSave>(GlobalPath) ?? new GlobalSave { version = GlobalVersion };
+            if (g.version < GlobalVersion)
+            {
+                // 音量・文字の速さの項目がなかった頃のセーブは 0 になっているので既定値に戻す
+                if (g.volume <= 0) g.volume = 1f;
+                if (g.bgmVolume <= 0) g.bgmVolume = 0.7f;
+                if (g.seVolume <= 0) g.seVolume = 0.8f;
+                if (g.ambientVolume <= 0) g.ambientVolume = 0.8f;
+                if (g.textSpeed == 0) g.textSpeed = 1;
+                g.version = GlobalVersion;
+                SaveGlobal(g);
+            }
+            return g;
+        }
         public static void SaveGlobal(GlobalSave g) => Write(GlobalPath, JsonUtility.ToJson(g, true));
 
         /// <summary>全セーブ削除（エディタメニューとデバッグ用）</summary>

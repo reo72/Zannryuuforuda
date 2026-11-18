@@ -88,6 +88,8 @@ namespace Zanryu
     {
         public string id;
         public string contact;     // 相手の表示名
+        public string address;     // メールアドレス（トークン可）
+        public string subject;     // 件名
         public string profile;     // main（既定）/ yui / any
         public List<ChatScript> scripts = new List<ChatScript>();
         public List<ChatNode> nodes = new List<ChatNode>();
@@ -163,6 +165,55 @@ namespace Zanryu
         public List<MonologueEntry> intros = new List<MonologueEntry>();    // その日の始まり
         public List<MonologueEntry> reactions = new List<MonologueEntry>(); // ファイルを初めて開いたとき
         public List<MonologueEntry> hints = new List<MonologueEntry>();     // 迷っているとき・ヒントボタン
+    }
+
+    // ---------------- 検索ソフト（web.json） ----------------
+
+    /// <summary>Lumen Search で読めるページ（ニュース・ブログ・掲示板など）</summary>
+    [Serializable]
+    public class WebPage
+    {
+        public string id;
+        public string site;        // サイト名（例：東都新聞）
+        public string url;         // 表示用の URL（https:// は自動で付く）
+        public string title;
+        public string date;        // 並び替えにも使うので「2016/10/04」の形で
+        public string body;
+        public string asset;       // Resources/Images の写真（記事の上に出る）
+        public int minDay;
+        public int maxDay;
+        public int minEndings;     // 見たエンド数がこれ以上で読めるようになる（周回で真相に近づく）
+        public string requireFlag;
+        public string forbidFlag;
+        public string setFlag;     // 初めて読んだときに立つフラグ（read_ページID は自動）
+        public List<string> tags = new List<string>();   // "feed" ならホームのニュース欄に出る
+        public List<string> links = new List<string>();  // 関連リンク（ページID）
+        public List<string> react = new List<string>();  // 初めて読んだときの独り言
+        public string style;       // 見た目：news / tech / blog / bbs / sns / shop / qa / corp / weather / dict / plain
+        public string category;    // 記事のカテゴリ（例：社会、スポーツ）
+        public string author;      // 書いた人（例：社会部、管理人：とおる）
+        public string caption;     // 写真の説明文
+        public List<string> comments = new List<string>(); // コメント欄
+    }
+
+    /// <summary>どのキーワードで、どのページが検索結果に出るか</summary>
+    [Serializable]
+    public class WebSearch
+    {
+        public List<string> keywords = new List<string>(); // どれかを含めば一致（全角半角・大小文字・空白は無視）
+        public List<string> results = new List<string>();  // ページID
+        public int minDay;
+        public string requireFlag;
+    }
+
+    [Serializable]
+    public class WebData
+    {
+        public List<WebPage> pages = new List<WebPage>();
+        public List<WebSearch> searches = new List<WebSearch>();
+        public List<string> trending = new List<string>(); // ホームの「急上昇ワード」
+        public List<string> ads = new List<string>();      // ページに出る広告の文
+        public List<string> fallback = new List<string>(); // 何も見つからないときに出すページ（{QUERY} が検索語になる）
     }
 
     // ---------------- 全体設定（config.json） ----------------

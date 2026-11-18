@@ -12,7 +12,7 @@ namespace Zanryu
     ///  ・文字は1文字ずつ出る
     ///  ・クリック / Space / Enter で、全文表示 → 次のページ
     ///  ・最後のページを送るとウィンドウが閉じる
-    ///  ・表示中もPCの操作はできる（ウィンドウの部分だけクリックを受け取る）
+    ///  ・表示中は画面のどこをクリックしても進む（読み終わるまでPCの操作は止まる）
     /// </summary>
     public class MonologueBox : MonoBehaviour
     {
@@ -24,7 +24,7 @@ namespace Zanryu
         int nextId;
         int finishedId = -1;
 
-        GameObject root, namePlate;
+        GameObject root, namePlate, catcher;
         TMP_Text body, nameText, arrow;
         string full = "";
         float typed;
@@ -35,6 +35,15 @@ namespace Zanryu
 
         public void Init(RectTransform layer)
         {
+            // 独り言の表示中は、画面全体のクリックを受け取って次へ進める（RPG と同じ操作）
+            var catchImg = UIKit.Panel(layer, new Color(0, 0, 0, 0), "ClickCatcher");
+            UIKit.Stretch(catchImg.rectTransform);
+            var cc = catchImg.gameObject.AddComponent<ClickHandler>();
+            cc.Single = Advance;
+            cc.Double = Advance;
+            catcher = catchImg.gameObject;
+            catcher.SetActive(false);
+
             var panel = UIKit.Panel(layer, new Color(0.03f, 0.04f, 0.06f, 0.90f), "MonologueWindow");
             UIKit.Place(panel.rectTransform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 66), new Vector2(1180, 176));
             var border = panel.gameObject.AddComponent<Outline>();
@@ -101,6 +110,7 @@ namespace Zanryu
             current = null;
             finishedId = nextId - 1; // 待っている処理を全部解放する
             if (root != null) root.SetActive(false);
+            if (catcher != null) catcher.SetActive(false);
         }
 
         void Next()
@@ -110,6 +120,7 @@ namespace Zanryu
             {
                 current = null;
                 root.SetActive(false);
+                catcher.SetActive(false);
                 return;
             }
             current = queue.Dequeue();
@@ -122,6 +133,7 @@ namespace Zanryu
             namePlate.SetActive(hasName);
             nameText.text = hasName ? current.speaker : "";
             root.SetActive(true);
+            catcher.SetActive(true);
         }
 
         public void Advance()

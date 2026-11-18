@@ -294,6 +294,7 @@ namespace Zanryu
                 case "explorer": c = new Color(0.40f, 0.62f, 0.66f); mark = "PC"; break;
                 case "chat": c = new Color(0.38f, 0.68f, 0.48f); mark = "MSG"; break;
                 case "taskmgr": c = new Color(0.52f, 0.52f, 0.58f); mark = "TSK"; break;
+                case "browser": c = new Color(0.30f, 0.55f, 0.85f); mark = "WEB"; break;
                 default: c = new Color(0.55f, 0.55f, 0.55f); mark = "?"; break;
             }
             if (f.icon == "trash") { c = new Color(0.58f, 0.62f, 0.64f); mark = "BIN"; }

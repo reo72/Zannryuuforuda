@@ -183,8 +183,8 @@
       "id": "re_toru",
       "file": "toru_note",
       "lines": [
-        "t.shinohara……篠原 透。",
-        "出品者の T.S は、ユイの父親だったんだ。"
+        "t.shinohara……篠原。",
+        "出品者のイニシャルも、T.S だった。"
       ]
     },
     {
@@ -237,8 +237,8 @@
       "id": "re_users_log",
       "file": "users_log",
       "lines": [
-        "yui……2016年。10年前から、このPCにいる？",
-        "misaki が「merged」された日に、自分のアカウントが作られている。"
+        "yui……2016年から、このPCにいる？",
+        "merged……「統合」って、何のことだ。"
       ]
     },
     {
@@ -246,7 +246,7 @@
       "file": "misaki_draft",
       "lines": [
         "ユイちゃん……？",
-        "ミサキは、ユイのことを知っていたんだ。"
+        "ミサキは、誰と話していたんだ。"
       ]
     },
     {
@@ -277,10 +277,8 @@
       "id": "re_news2",
       "file": "news2",
       "lines": [
-        "亡くなった娘を、プログラムにした……？",
-        "「人と話すたびに、思い出していく」……。",
-        "篠原透、T.S。出品者と同じイニシャルだ。",
-        "このPCの中にいるのは、ユイなのか。"
+        "「個人的な理由です」……。",
+        "篠原透。……新聞記事の、亡くなった女の子の父親と同じ名前だ。"
       ]
     },
     {
@@ -300,6 +298,24 @@
         "……このPCが、うちに届いた日だ。",
         "この記事は、ミサキがいなくなったあとの日付だ。",
         "誰が、このPCに保存したんだ。"
+      ]
+    },
+    {
+      "id": "re_browser",
+      "file": "browser",
+      "lines": [
+        "検索ソフトだ。",
+        "日記やメモで気になったことばを、調べてみよう。"
+      ]
+    },
+    {
+      "id": "re_y_draft",
+      "file": "y_draft",
+      "profile": "yui",
+      "lines": [
+        "……全部、つながった。",
+        "ハルは、ユイだった。",
+        "そして次は、自分の番だった。"
       ]
     }
   ],
@@ -321,8 +337,8 @@
       "requireFlag": "opened_diary_1",
       "forbidFlag": "opened_chat",
       "lines": [
-        "そういえば、出品者からメッセージが来ているかもしれない。",
-        "デスクトップの「メッセージ」を開いてみよう。"
+        "そういえば、出品者からメールが来ているかもしれない。",
+        "デスクトップの「メール」を開いてみよう。"
       ]
     },
     {
@@ -343,6 +359,16 @@
       "forbidFlag": "opened_notes",
       "lines": [
         "デスクトップの「わかったこと.txt」に、気づいたことがまとまっていく。迷ったら読み返そう。"
+      ]
+    },
+    {
+      "id": "hi_web_d1",
+      "day": 1,
+      "idle": 40,
+      "requireFlag": "opened_diary_1",
+      "forbidFlag": "opened_browser",
+      "lines": [
+        "デスクトップの「Lumen Search」で、調べものができそうだ。"
       ]
     },
     {
@@ -412,7 +438,7 @@
       "idle": 35,
       "forbidFlag": "heard_haru_bd",
       "lines": [
-        "ハルからメッセージが来ていないか、確認しよう。"
+        "ハルからメールが届いていないか、確認しよう。"
       ]
     },
     {
@@ -438,11 +464,22 @@
       ]
     },
     {
+      "id": "hi_web_d3",
+      "day": 3,
+      "idle": 35,
+      "requireFlag": "opened_news1",
+      "forbidFlag": "read_yuiexe",
+      "lines": [
+        "タスクマネージャーにあった「yui.exe」……。",
+        "Lumen Search で検索してみよう。"
+      ]
+    },
+    {
       "id": "hi_d3_z",
       "day": 3,
       "idle": 12,
       "repeatEvery": 60,
-      "requireFlag": "opened_diary_3,opened_photo_room,unlocked_private,opened_news1",
+      "requireFlag": "opened_diary_3,opened_photo_room,unlocked_private,opened_news1,read_yuiexe",
       "lines": [
         "……もう調べることはなさそうだ。",
         "今日は寝よう。「Lumen OS」からシャットダウンだ。"
@@ -489,11 +526,22 @@
       ]
     },
     {
+      "id": "hi_web_d4",
+      "day": 4,
+      "idle": 35,
+      "requireFlag": "opened_news2",
+      "forbidFlag": "read_blog_1",
+      "lines": [
+        "新聞記事にあった父親の名前……篠原透。",
+        "検索したら、何か出てくるかもしれない。"
+      ]
+    },
+    {
       "id": "hi_d4_z",
       "day": 4,
       "idle": 12,
       "repeatEvery": 60,
-      "requireFlag": "opened_diary_4,opened_sys,opened_users_log,opened_news2",
+      "requireFlag": "opened_diary_4,opened_sys,opened_users_log,opened_news2,read_blog_1",
       "lines": [
         "これ以上は、今日はやめておこう。",
         "シャットダウンしよう。"
@@ -549,11 +597,21 @@
       ]
     },
     {
+      "id": "hi_web_d5",
+      "day": 5,
+      "idle": 35,
+      "requireFlag": "opened_news3",
+      "forbidFlag": "read_seller",
+      "lines": [
+        "出品者の「T.S」……フリマで検索してみよう。"
+      ]
+    },
+    {
       "id": "hi_d5_z",
       "day": 5,
       "idle": 12,
       "repeatEvery": 60,
-      "requireFlag": "opened_diary_5,reversed_noise,saw_memo_name,opened_news3",
+      "requireFlag": "opened_diary_5,reversed_noise,saw_memo_name,opened_news3,read_seller",
       "lines": [
         "……もう、電源を切ろう。"
       ]
@@ -587,11 +645,21 @@
       ]
     },
     {
+      "id": "hi_web_d6",
+      "day": 6,
+      "idle": 35,
+      "requireFlag": "opened_news4",
+      "forbidFlag": "read_misaki_sns",
+      "lines": [
+        "ミサキのことを、検索してみよう。"
+      ]
+    },
+    {
       "id": "hi_d6_z",
       "day": 6,
       "idle": 12,
       "repeatEvery": 60,
-      "requireFlag": "opened_diary_6,opened_misaki_draft,opened_news4",
+      "requireFlag": "opened_diary_6,opened_misaki_draft,opened_news4,read_misaki_sns",
       "lines": [
         "あと1日。",
         "……シャットダウンしよう。"
@@ -604,6 +672,17 @@
       "forbidFlag": "opened_next_owner",
       "lines": [
         "デスクトップの「次の人へ.txt」……開いてみよう。"
+      ]
+    },
+    {
+      "id": "hi_web_d7",
+      "day": 7,
+      "idle": 35,
+      "requireFlag": "reversed_noise",
+      "forbidFlag": "read_blog_letter",
+      "lines": [
+        "「もういいよ」……。",
+        "あの声のことばを、検索してみたら。"
       ]
     },
     {
@@ -620,18 +699,19 @@
       "id": "hi_yui_a",
       "profile": "yui",
       "idle": 30,
-      "forbidFlag": "opened_y_letter",
+      "forbidFlag": "opened_y_draft",
       "lines": [
-        "デスクトップのテキストを読んでみよう。"
+        "デスクトップのファイルを、読んでみよう。"
       ]
     },
     {
       "id": "hi_yui_b",
       "profile": "yui",
       "idle": 30,
-      "requireFlag": "opened_y_letter",
+      "requireFlag": "opened_y_draft",
       "lines": [
-        "……メッセージを、開いてみよう。"
+        "……「おとうさんへ」も、読まないと。",
+        "それから、メールを。"
       ]
     },
     {

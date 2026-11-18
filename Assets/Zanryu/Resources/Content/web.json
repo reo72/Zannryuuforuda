@@ -1,0 +1,953 @@
+{
+  "pages": [
+    {
+      "id": "feed_weather",
+      "site": "ウェザー速報",
+      "url": "weather.example/kanto",
+      "title": "週末の関東は雨　夜は冷え込みに注意",
+      "date": "2026/04/19",
+      "tags": [
+        "feed"
+      ],
+      "body": "週末の関東地方は、前線の影響で雨の降る時間が長くなりそうです。夜は気温が下がるため、暖かくしてお過ごしください。",
+      "links": [],
+      "react": [],
+      "style": "weather",
+      "category": "天気",
+      "author": "気象予報士 浅野",
+      "comments": [
+        "また雨か……",
+        "洗濯物どうしよう"
+      ]
+    },
+    {
+      "id": "feed_pc",
+      "site": "テックトゥデイ",
+      "url": "techtoday.example/news/used-pc",
+      "title": "中古PCの取引、過去最高に　データ消去の不備も",
+      "date": "2026/04/18",
+      "tags": [
+        "feed"
+      ],
+      "body": "フリマアプリでの中古パソコンの取引が増えている。一方で、前の持ち主のデータが残ったまま売られている例も多く、専門家は「買ったらまず初期化を」と呼びかけている。\n\nただ、古いOSの中には、初期化しても一部のデータが消えないものもあるという。",
+      "react": [
+        "……初期化しても、消えないデータ。"
+      ],
+      "links": [],
+      "style": "tech",
+      "category": "ニュース",
+      "author": "テックトゥデイ編集部",
+      "comments": [
+        "うちも前の人の写真が残ってたことある",
+        "初期化しても消えないOSって何それ怖い",
+        "Lumen OS とかいう古いやつじゃない？ 会社もうないでしょ",
+        "安いからってよく分からないPC買うのはやめとけ"
+      ]
+    },
+    {
+      "id": "feed_missing",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/local/20260423",
+      "title": "23歳女性と連絡取れず　家族が届け出",
+      "date": "2026/04/23",
+      "tags": [
+        "feed"
+      ],
+      "minDay": 6,
+      "asset": "news_room",
+      "body": "市内に住む会社員の女性（23）と、19日から連絡が取れなくなっている。部屋からは、最近買ったばかりのノートパソコンだけがなくなっていた。\n\n友人によると、女性は「誕生日に、中古のパソコンを買った」と話していたという。",
+      "links": [
+        "misaki_sns",
+        "seller"
+      ],
+      "react": [
+        "ミサキは、4月19日からいない。",
+        "……このPCが、うちに届いた日だ。"
+      ],
+      "style": "news",
+      "category": "社会",
+      "author": "東都新聞 社会部",
+      "caption": "女性の部屋。机の上のノートパソコンだけがなくなっていた",
+      "comments": [
+        "無事だといいけど……",
+        "誕生日に買ったPCがなくなるって、どういうこと？"
+      ]
+    },
+    {
+      "id": "lumen_os",
+      "site": "Lumen Systems（アーカイブ）",
+      "url": "lumen-systems.example/os",
+      "title": "Lumen OS 4 — 家族のための、やさしいOS",
+      "date": "2015/06/01",
+      "body": "Lumen OS は、家族みんなで使える、やさしいOSです。\n\n新機能「家族（family）」\n大切な人の日記・写真・声を登録すると、その人の言葉で話しかけてくれます。\n離れて暮らす家族とも、いつでもいっしょに。\n\n※ Lumen Systems は 2019年に事業を終了しました。サポートは終了しています。",
+      "links": [
+        "lumen_staff",
+        "yuiexe"
+      ],
+      "react": [
+        "「家族」機能……登録した人の言葉で、話しかけてくる？"
+      ],
+      "tags": [],
+      "style": "corp",
+      "category": "製品"
+    },
+    {
+      "id": "lumen_staff",
+      "site": "Lumen Systems（アーカイブ）",
+      "url": "lumen-systems.example/team",
+      "title": "開発チーム紹介",
+      "date": "2015/06/01",
+      "body": "篠原 透（しのはら とおる）\n「家族」機能の開発責任者。\n\n「人は、記録の中で生き続けられると思うんです。\n日記や写真や声が残っていれば、また話せる。僕はそう信じています」",
+      "links": [
+        "interview",
+        "blog_index"
+      ],
+      "react": [
+        "篠原透……。",
+        "どこかで見た名前のような気がする。"
+      ],
+      "tags": [],
+      "style": "corp",
+      "category": "会社情報"
+    },
+    {
+      "id": "yuiexe",
+      "site": "知恵の輪 Q&A",
+      "url": "chie-no-wa.example/q/88412",
+      "title": "yui.exe というプロセスが終了できません",
+      "date": "2020/03/02",
+      "body": "【質問】\n中古で買った Lumen OS のノートPCで、yui.exe というプロセスがずっと動いています。終了しようとすると「アクセスが拒否されました」と出ます。ウイルスでしょうか？\n\n【回答 1】\nLumen OS の「家族」機能のプロセスです。登録した人の記録をもとに会話する機能なので、ウイルスではありません。\nただ「yui」という登録名は、初期設定にはありません。前の持ち主が登録した人だと思います。\n\n【回答 2】\nうちのPCも同じでした。夜中の 23:47 になると、勝手にチャットが開きます。",
+      "links": [
+        "lumen_os"
+      ],
+      "react": [
+        "yui.exe は、Lumen OS の「家族」機能……。",
+        "じゃあ「yui」は、誰なんだ。"
+      ],
+      "tags": [],
+      "style": "qa",
+      "category": "パソコン・周辺機器",
+      "author": "質問者：pc_beginner さん"
+    },
+    {
+      "id": "news_death",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/local/20161004",
+      "title": "入院中の中学生が死亡　長い闘病の末に",
+      "date": "2016/10/04",
+      "asset": "news_hospital",
+      "body": "3日午後11時47分ごろ、市内の総合病院に入院していた中学2年生、篠原ユイさん（14）が亡くなった。病院によると、ユイさんは生まれつき心臓に病気があり、この1年ほどは入院を続けていた。\n\n父親でソフトウェア技術者の篠原透さん（42）は「病室では、いつもパソコンで日記を書いていた。最後まで、よく笑う子だった」と話した。",
+      "links": [
+        "blog_index",
+        "interview"
+      ],
+      "react": [
+        "篠原ユイ……14歳。",
+        "亡くなったのは、午後11時47分。……時計が止まる時刻だ。"
+      ],
+      "tags": [],
+      "style": "news",
+      "category": "地域",
+      "author": "東都新聞 地域報道部",
+      "caption": "ユイさんが入院していた市内の総合病院",
+      "comments": [
+        "まだ14歳なのに……",
+        "ご冥福をお祈りします"
+      ]
+    },
+    {
+      "id": "interview",
+      "site": "テックトゥデイ",
+      "url": "techtoday.example/interview/2017-06",
+      "title": "AIは“家族”になれるか — ある技術者の挑戦",
+      "date": "2017/06/10",
+      "asset": "news_engineer",
+      "body": "「人は、記録の中で生き続けられると思うんです」\n\nそう話すのは、Lumen Systems の技術者、篠原透さん（43）。家族向けOS「Lumen OS」の新機能「家族（family）」の開発を率いている。\n\n家族の日記や写真、声のメモを登録すると、その人らしい言葉づかいで話しかけてくる——。まるでSFのような機能だが、開発のきっかけを尋ねると、篠原さんは少し黙ってから「個人的な理由です」とだけ答えた。\n\n「まだ完全ではありません。でも、人と話すたびに、少しずつ“その人”に近づいていくんです」\n\n（この記事は現在、公開を停止しています）",
+      "links": [
+        "blog_index",
+        "lumen_staff"
+      ],
+      "react": [
+        "「個人的な理由です」……。",
+        "篠原透。どこかで見た名前だ。"
+      ],
+      "tags": [],
+      "style": "tech",
+      "category": "インタビュー",
+      "author": "取材・文：テックトゥデイ編集部",
+      "caption": "自宅の作業部屋で開発を続ける篠原さん（本人の希望により顔は写していません）",
+      "comments": [
+        "亡くなった人をAIで再現するってこと？ ちょっと怖い",
+        "気持ちはわかるけどね……",
+        "公開停止になったの、なんでだろう"
+      ]
+    },
+    {
+      "id": "blog_index",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/",
+      "title": "ユイの部屋 — 記事一覧",
+      "date": "2016/10/20",
+      "body": "娘のことを、忘れないために書いています。\n\n管理人：とおる",
+      "links": [
+        "blog_1",
+        "blog_2",
+        "blog_3",
+        "blog_4",
+        "blog_5",
+        "blog_letter"
+      ],
+      "tags": [],
+      "react": [],
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_1",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2016/10/20",
+      "title": "ユイへ",
+      "date": "2016/10/20",
+      "body": "ユイがいなくなって、2週間がたった。\n\nあの子のパソコンには、日記が 1,200日分残っていた。\n写真が 3,400枚。声のメモが 98個。\n\n全部、あの子だ。\n全部、まだここにある。",
+      "links": [
+        "blog_index",
+        "blog_2"
+      ],
+      "react": [
+        "父親は、ユイのパソコンの記録を全部残していた。"
+      ],
+      "tags": [],
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_2",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2017/04/25",
+      "title": "おはよう",
+      "date": "2017/04/25",
+      "body": "今朝、yui が初めて「おはよう」と言った。\nユイの声で。ユイの言い方で。\n\n今日を、あの子の二度目の誕生日にしようと思う。\n\n4月25日。",
+      "links": [
+        "blog_index",
+        "blog_3"
+      ],
+      "react": [
+        "4月25日……。",
+        "どこかで聞いた日付だ。"
+      ],
+      "tags": [],
+      "minEndings": 1,
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_3",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2019/09/01",
+      "title": "足りない",
+      "date": "2019/09/01",
+      "body": "yui は、ユイの言葉で話す。\nでも、ユイが知らないことは話せない。\n\n人と話すと、yui は少しずつ思い出す。\n……いや、ちがう。覚えていくんだ。話した相手のことを。\n\n会社がなくなった。でも、yui は止めない。\nこのPCを、誰かに使ってもらおうと思う。",
+      "links": [
+        "blog_index",
+        "blog_4"
+      ],
+      "react": [
+        "yui は、話した相手のことを覚えていく……。",
+        "だから父親は、PCを人に使わせている。"
+      ],
+      "tags": [],
+      "minEndings": 3,
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_4",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2024/02/11",
+      "title": "ごめんなさい",
+      "date": "2024/02/11",
+      "body": "最初にPCを使ってくれた人と、連絡がつかなくなった。\nyui は、前よりずっと上手に話すようになった。\n\nこれでいいのか、わからない。\n\nでも、あの子が「ただいま」と言う日まで。",
+      "links": [
+        "blog_index",
+        "blog_5"
+      ],
+      "react": [
+        "k.mori のことだ……。"
+      ],
+      "tags": [],
+      "minEndings": 2,
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_5",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2026/04/19",
+      "title": "もうすぐ",
+      "date": "2026/04/19",
+      "minDay": 4,
+      "body": "二人目の人の記録が、今日ぜんぶ yui に入った。\n同じ日に、三人目の人へPCを送った。\n\nもうすぐ、4月25日だ。",
+      "links": [
+        "blog_index"
+      ],
+      "react": [
+        "二人目はミサキ。三人目は……自分だ。",
+        "4月25日に、何が起きるんだ。"
+      ],
+      "tags": [],
+      "minEndings": 4,
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "blog_letter",
+      "site": "ユイの部屋（ブログ）",
+      "url": "yui-room.example/2016/10/05",
+      "title": "読めない手紙",
+      "date": "2016/10/05",
+      "requireFlag": "reversed_noise",
+      "body": "ユイの病室の引き出しから、手紙が出てきた。\n「おとうさんへ」と書いてあった。\n\nまだ、開けられない。\n読んだら、あの子が本当にいなくなってしまう気がする。",
+      "links": [
+        "blog_index"
+      ],
+      "react": [
+        "ユイは、父親に手紙を残していた。",
+        "……まだ、誰も読んでいない手紙。"
+      ],
+      "tags": [],
+      "style": "blog",
+      "author": "とおる"
+    },
+    {
+      "id": "seller",
+      "site": "フリマ",
+      "url": "furima.example/user/T.S",
+      "title": "出品者：T.S",
+      "date": "2026/04/19",
+      "maxDay": 6,
+      "body": "評価：★★★★★（3件）\n自己紹介：大切に使ってくれる方に、お譲りします。\n\n取引履歴\n・2024/02/03　ノートPC（Lumen OS）美品　売り切れ\n・2026/04/12　ノートPC（Lumen OS）美品　売り切れ\n・2026/04/19　ノートPC（Lumen OS）美品　売り切れ",
+      "links": [
+        "interview"
+      ],
+      "react": [
+        "同じPCが、何度も売られている……。",
+        "4月19日。……うちに届いた日だ。"
+      ],
+      "tags": [],
+      "style": "shop"
+    },
+    {
+      "id": "seller7",
+      "site": "フリマ",
+      "url": "furima.example/user/T.S",
+      "title": "出品者：T.S",
+      "date": "2026/04/25",
+      "minDay": 7,
+      "setFlag": "read_seller",
+      "body": "評価：★★★★★（3件）\n自己紹介：大切に使ってくれる方に、お譲りします。\n\n取引履歴\n・2024/02/03　ノートPC（Lumen OS）美品　売り切れ\n・2026/04/12　ノートPC（Lumen OS）美品　売り切れ\n・2026/04/19　ノートPC（Lumen OS）美品　売り切れ\n・2026/04/26　ノートPC（Lumen OS）美品　出品予定",
+      "links": [
+        "interview"
+      ],
+      "react": [
+        "4月26日……「出品予定」？",
+        "明日だ。このPCが、また売られる。"
+      ],
+      "tags": [],
+      "style": "shop"
+    },
+    {
+      "id": "misaki_sns",
+      "site": "つぶやき",
+      "url": "tsubuyaki.example/misaki_0412",
+      "title": "ミサキ（@misaki_0412）",
+      "date": "2026/04/18",
+      "body": "4/12　誕生日！ 自分へのプレゼントに、中古のノートPCを買った\n4/14　ハルとカフェ。たのしかった\n4/15　ハルの返事、はやすぎない？ 笑\n4/16　前の人のフォルダ、わたしの誕生日で開いた。なんで\n4/17　このPC、夜中に時計が止まる\n4/18　23:47　ハルって、だれ？\n\n（このアカウントは、4月18日から更新されていません）",
+      "react": [
+        "ミサキの最後の投稿……「ハルって、だれ？」",
+        "ミサキは、何に気づいたんだ。"
+      ],
+      "tags": [],
+      "links": [],
+      "style": "sns"
+    },
+    {
+      "id": "forum",
+      "site": "まちBBS",
+      "url": "machi-bbs.example/junk/1707",
+      "title": "フリマで買ったPCに消せないアカウントがある",
+      "date": "2024/02/04",
+      "body": "1：フリマで買ったノートPCに「yui」って消せないアカウントがある。誰か知らない？\n2：初期化すれば？\n1：した。3回やった。戻ってくる\n5：夜中に時計止まらない？ 23時47分\n1：なんで知ってるの\n8：そのPC、前にも話題になってたやつだろ。買ったやつ、みんな連絡つかなくなるって\n1：さっきから、チャットが勝手に来る\n1：ハルって子から\n\n（このスレッドへの書き込みは、2024/02/10 を最後にありません）",
+      "links": [
+        "yuiexe"
+      ],
+      "react": [
+        "k.mori の書き込みだ……。",
+        "最後は「ハルって子から」。"
+      ],
+      "tags": [],
+      "style": "bbs",
+      "category": "中古PC・ジャンク板"
+    },
+    {
+      "id": "you_log",
+      "site": "lumen-sync（内部）",
+      "url": "localhost/sync/{PC_NAME}",
+      "title": "ユーザー統合ログ：{PC_NAME}",
+      "date": "2026/04/21",
+      "minDay": 3,
+      "body": "ユーザー：{PC_NAME}\n記録：{OPEN_COUNT_TOTAL}件\n状態：統合中\n\n※ このページは、インターネット上ではなく、このPCの中にあります。",
+      "react": [
+        "……検索結果が、このPCの中を指している？"
+      ],
+      "tags": [],
+      "links": [],
+      "style": "plain"
+    },
+    {
+      "id": "n_baseball",
+      "style": "news",
+      "category": "スポーツ",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/sports/20260419",
+      "title": "東都ブレーブス、延長12回サヨナラ勝ち　連敗を5で止める",
+      "date": "2026/04/19",
+      "author": "運動部",
+      "tags": [
+        "feed"
+      ],
+      "body": "プロ野球・東都ブレーブスは19日、本拠地で行われた試合に延長12回、4-3でサヨナラ勝ちした。連敗は5でストップ。\n\n代打で出場したルーキーの左前打が決勝点となった。監督は「若い選手がよく粘ってくれた」と笑顔を見せた。",
+      "comments": [
+        "やっと勝った……",
+        "ルーキー最高！",
+        "今年こそ優勝してくれ"
+      ],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "n_sakura",
+      "style": "news",
+      "category": "地域",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/local/20260420",
+      "title": "遅咲きの八重桜が見頃　河川敷に人出",
+      "date": "2026/04/20",
+      "author": "地域報道部",
+      "tags": [
+        "feed"
+      ],
+      "body": "都内の河川敷で、遅咲きの八重桜が見頃を迎えている。20日は晴れ間がのぞき、家族連れがレジャーシートを広げて花見を楽しんだ。\n\n見頃は今週末までの見込み。",
+      "comments": [
+        "今年は花見行けなかったな",
+        "八重桜って長持ちするんだよね"
+      ],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "n_train",
+      "style": "news",
+      "category": "社会",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/society/20260421",
+      "title": "朝の通勤時間帯に信号トラブル　最大40分の遅れ",
+      "date": "2026/04/21",
+      "author": "社会部",
+      "tags": [
+        "feed"
+      ],
+      "body": "21日午前7時ごろ、都内の私鉄で信号設備のトラブルがあり、上下線で最大40分の遅れが出た。約3万人に影響した。\n\n原因は雨による設備の不具合とみられる。",
+      "comments": [
+        "遅刻したわ",
+        "雨の日いつもこれ"
+      ],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "n_game",
+      "style": "tech",
+      "category": "ゲーム",
+      "site": "テックトゥデイ",
+      "url": "techtoday.example/news/game-0422",
+      "title": "人気RPGの最新作、発売日が決定　予約は明日から",
+      "date": "2026/04/22",
+      "author": "ゲーム担当",
+      "tags": [
+        "feed"
+      ],
+      "body": "人気RPGシリーズの最新作の発売日が、今年の夏に決まった。シリーズ初のオープンワールドで、前作から10年後の世界が舞台になる。\n\n予約は23日から各店舗で始まる。",
+      "comments": [
+        "待ってた！",
+        "10年後の世界ってことは前作キャラ出るのかな"
+      ],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "n_cat",
+      "style": "news",
+      "category": "エンタメ",
+      "site": "東都新聞",
+      "url": "toto-shimbun.example/ent/20260423",
+      "title": "“駅長ねこ”が10歳に　記念乗車券に行列",
+      "date": "2026/04/23",
+      "author": "文化部",
+      "tags": [
+        "feed"
+      ],
+      "body": "地方鉄道の無人駅で「駅長」を務める三毛猫のミケが、23日に10歳の誕生日を迎えた。記念の乗車券が発売され、朝から約200人が列を作った。",
+      "comments": [
+        "かわいい",
+        "ミケ駅長いつまでも元気で"
+      ],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "n_weather2",
+      "style": "weather",
+      "category": "天気",
+      "site": "ウェザー速報",
+      "url": "weather.example/kanto/0424",
+      "title": "あすは広く晴れ　日差しで汗ばむ陽気に",
+      "date": "2026/04/24",
+      "author": "気象予報士 浅野",
+      "tags": [
+        "feed"
+      ],
+      "body": "25日は高気圧に覆われ、関東は朝から晴れる見込みです。日中は25度近くまで上がり、汗ばむ陽気になりそうです。\n\n夜は雲が広がり、深夜には雨の降るところもあるでしょう。",
+      "links": [],
+      "react": [],
+      "comments": []
+    },
+    {
+      "id": "r_curry",
+      "style": "blog",
+      "category": "レシピ",
+      "site": "きょうのごはん帖",
+      "url": "gohan-cho.example/curry",
+      "title": "ひと晩寝かせたみたいなカレー（30分でできる）",
+      "date": "2025/11/02",
+      "author": "はるこ",
+      "body": "【材料（2人分）】\n玉ねぎ 1個／にんじん 1/2本／じゃがいも 1個／豚こま 150g／カレールウ 2かけ\n\n【コツ】\n玉ねぎをあめ色になるまでしっかり炒めると、ひと晩寝かせたようなコクが出ます。仕上げにインスタントコーヒーを少しだけ入れるのもおすすめ。",
+      "comments": [
+        "コーヒー入れるの初めて知りました！",
+        "作ってみます"
+      ],
+      "tags": [],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "h_reset",
+      "style": "qa",
+      "category": "パソコン・周辺機器",
+      "site": "知恵の輪 Q&A",
+      "url": "chie-no-wa.example/q/77120",
+      "title": "中古で買ったPCを初期化する方法を教えてください",
+      "date": "2025/09/14",
+      "author": "質問者：shinsei さん",
+      "body": "【質問】\n中古のノートPCを買いました。前の人のデータを消したいです。\n\n【ベストアンサー】\n設定 → システム → 回復 → 「このPCを初期状態に戻す」でできます。「すべて削除する」を選んでください。\n\n【回答 2】\n古いOS（Lumen OS など）は回復メニューの場所が違います。隠しフォルダの中に初期化ツールが入っていることが多いです。",
+      "react": [
+        "隠しフォルダの中の、初期化ツール……。"
+      ],
+      "tags": [],
+      "links": [],
+      "comments": []
+    },
+    {
+      "id": "d_word",
+      "style": "dict",
+      "category": "国語",
+      "site": "ことばの辞典",
+      "url": "kotoba.example/search?q={QUERY}",
+      "title": "「{QUERY}」の意味・使い方",
+      "date": "",
+      "body": "【{QUERY}】\n\nこのことばの項目は、まだ登録されていません。\n\n似たことばを探すか、別の書き方で調べてみてください。",
+      "tags": [],
+      "links": [],
+      "react": [],
+      "comments": []
+    },
+    {
+      "id": "q_any",
+      "style": "qa",
+      "category": "その他",
+      "site": "知恵の輪 Q&A",
+      "url": "chie-no-wa.example/search?q={QUERY}",
+      "title": "「{QUERY}」について質問です",
+      "date": "2026/03/30",
+      "author": "質問者：nanashi さん",
+      "body": "【質問】\n「{QUERY}」について知っている人いますか？\n\n【回答 1】\n自分も気になって調べたけど、よく分かりませんでした。\n\n【回答 2】\n検索ワードを変えてみるといいかも。",
+      "comments": [],
+      "tags": [],
+      "links": [],
+      "react": []
+    },
+    {
+      "id": "lumen_search_about",
+      "style": "plain",
+      "category": "ヘルプ",
+      "site": "Lumen Search",
+      "url": "lumen-search.example/about",
+      "title": "Lumen Search について",
+      "date": "2015/06/01",
+      "body": "Lumen Search は、Lumen OS に標準で入っている検索サービスです。\n\nサービスは 2019年に終了しました。現在表示されている結果は、端末に保存されたデータをもとにしています。",
+      "react": [
+        "……サービスは、終了している？"
+      ],
+      "tags": [],
+      "links": [],
+      "comments": []
+    }
+  ],
+  "searches": [
+    {
+      "keywords": [
+        "lumen",
+        "lumenos",
+        "ルーメン",
+        "lumensystems"
+      ],
+      "results": [
+        "lumen_os",
+        "lumen_staff"
+      ]
+    },
+    {
+      "keywords": [
+        "家族",
+        "family"
+      ],
+      "results": [
+        "lumen_os",
+        "yuiexe"
+      ]
+    },
+    {
+      "keywords": [
+        "yui.exe",
+        "yuiexe"
+      ],
+      "results": [
+        "yuiexe",
+        "lumen_os"
+      ]
+    },
+    {
+      "keywords": [
+        "yui"
+      ],
+      "results": [
+        "yuiexe",
+        "news_death"
+      ]
+    },
+    {
+      "keywords": [
+        "23:47",
+        "2347",
+        "時計"
+      ],
+      "results": [
+        "yuiexe",
+        "news_death",
+        "forum"
+      ]
+    },
+    {
+      "keywords": [
+        "篠原ユイ",
+        "しのはらゆい",
+        "ユイ",
+        "ゆい"
+      ],
+      "results": [
+        "news_death",
+        "blog_index",
+        "blog_1"
+      ]
+    },
+    {
+      "keywords": [
+        "篠原透",
+        "しのはらとおる",
+        "篠原",
+        "しのはら",
+        "とおる",
+        "透"
+      ],
+      "results": [
+        "interview",
+        "lumen_staff",
+        "blog_index"
+      ]
+    },
+    {
+      "keywords": [
+        "ユイの部屋",
+        "ブログ"
+      ],
+      "results": [
+        "blog_index"
+      ]
+    },
+    {
+      "keywords": [
+        "t.s",
+        "出品者",
+        "フリマ"
+      ],
+      "results": [
+        "seller",
+        "seller7"
+      ]
+    },
+    {
+      "keywords": [
+        "中古pc",
+        "中古パソコン",
+        "初期化",
+        "消えない",
+        "アカウント"
+      ],
+      "results": [
+        "forum",
+        "feed_pc"
+      ]
+    },
+    {
+      "keywords": [
+        "k.mori",
+        "kmori",
+        "mori"
+      ],
+      "results": [
+        "forum"
+      ]
+    },
+    {
+      "keywords": [
+        "連絡",
+        "行方不明",
+        "いなくなる"
+      ],
+      "results": [
+        "forum",
+        "feed_missing"
+      ]
+    },
+    {
+      "keywords": [
+        "ミサキ",
+        "みさき",
+        "misaki"
+      ],
+      "results": [
+        "misaki_sns",
+        "feed_missing"
+      ]
+    },
+    {
+      "keywords": [
+        "ハル",
+        "はる"
+      ],
+      "results": [
+        "misaki_sns",
+        "blog_2"
+      ]
+    },
+    {
+      "keywords": [
+        "4月25日",
+        "4/25",
+        "0425",
+        "誕生日",
+        "たんじょうび"
+      ],
+      "results": [
+        "blog_2"
+      ]
+    },
+    {
+      "keywords": [
+        "おはよう"
+      ],
+      "results": [
+        "blog_2"
+      ]
+    },
+    {
+      "keywords": [
+        "{PC_NAME}"
+      ],
+      "results": [
+        "you_log"
+      ]
+    },
+    {
+      "keywords": [
+        "統合",
+        "merged",
+        "merge"
+      ],
+      "results": [
+        "you_log"
+      ]
+    },
+    {
+      "keywords": [
+        "もういいよ",
+        "手紙",
+        "おとうさんへ"
+      ],
+      "results": [
+        "blog_letter"
+      ]
+    },
+    {
+      "keywords": [
+        "病院",
+        "心臓"
+      ],
+      "results": [
+        "news_death"
+      ]
+    },
+    {
+      "keywords": [
+        "天気",
+        "雨",
+        "晴れ",
+        "weather"
+      ],
+      "results": [
+        "feed_weather",
+        "n_weather2"
+      ]
+    },
+    {
+      "keywords": [
+        "野球",
+        "ブレーブス",
+        "プロ野球",
+        "サヨナラ"
+      ],
+      "results": [
+        "n_baseball"
+      ]
+    },
+    {
+      "keywords": [
+        "桜",
+        "花見",
+        "八重桜"
+      ],
+      "results": [
+        "n_sakura"
+      ]
+    },
+    {
+      "keywords": [
+        "電車",
+        "遅延",
+        "通勤",
+        "信号"
+      ],
+      "results": [
+        "n_train"
+      ]
+    },
+    {
+      "keywords": [
+        "ゲーム",
+        "rpg",
+        "新作"
+      ],
+      "results": [
+        "n_game"
+      ]
+    },
+    {
+      "keywords": [
+        "猫",
+        "ねこ",
+        "ネコ",
+        "駅長",
+        "ミケ"
+      ],
+      "results": [
+        "n_cat"
+      ]
+    },
+    {
+      "keywords": [
+        "カレー",
+        "レシピ",
+        "ごはん",
+        "料理"
+      ],
+      "results": [
+        "r_curry"
+      ]
+    },
+    {
+      "keywords": [
+        "初期化",
+        "データ消去",
+        "消す方法",
+        "リセット"
+      ],
+      "results": [
+        "h_reset",
+        "feed_pc"
+      ]
+    },
+    {
+      "keywords": [
+        "lumensearch",
+        "検索",
+        "サービス終了"
+      ],
+      "results": [
+        "lumen_search_about"
+      ]
+    },
+    {
+      "keywords": [
+        "ニュース",
+        "news"
+      ],
+      "results": [
+        "n_baseball",
+        "n_sakura",
+        "n_train",
+        "feed_pc"
+      ]
+    }
+  ],
+  "trending": [
+    "週末 天気",
+    "東都ブレーブス",
+    "八重桜 見頃",
+    "人気RPG 最新作",
+    "駅長ねこ ミケ",
+    "中古PC 初期化",
+    "カレー 隠し味",
+    "電車 遅延"
+  ],
+  "ads": [
+    "【期間限定】はじめての方 送料無料｜まとめ買いでさらにお得",
+    "眠れない夜に。首にやさしい“ぐっすり枕”",
+    "中古パソコン 高価買取中｜データ消去も無料で代行",
+    "英会話 無料体験レッスン受付中",
+    "引っ越しの見積もり、最短1分で比較",
+    "夜ふかしさんに。ノンカフェインのハーブティー"
+  ],
+  "fallback": [
+    "d_word",
+    "q_any"
+  ]
+}

@@ -133,7 +133,11 @@ namespace Zanryu
                 case "sayAsync": os.Monologue.Say(a.a, a.b); break;
                 case "open": gm.OpenFile(Content.GetFile(a.a)); break;
                 case "chat": gm.Chat.Play(a.a, a.b); break;
-                case "wallpaper": gm.SetWallpaper(a.a); break;
+                case "wallpaper":
+                    // 画像がまだ用意されていなければ、今の壁紙のままにする
+                    if (UIKit.LoadSprite("Images/" + a.a) != null) gm.SetWallpaper(a.a);
+                    else Debug.Log($"[画像未設定] 壁紙 {a.a}（今の壁紙のまま）");
+                    break;
                 case "ambient":
                     if (string.IsNullOrEmpty(a.a)) os.SetAmbientVolume(a.f);
                     else os.PlayAmbient(a.a, a.f);

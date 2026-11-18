@@ -331,7 +331,8 @@ namespace Zanryu
 
             // メタ演出：本物のデスクトップにファイルを残す
             if (!string.IsNullOrEmpty(def.realFile))
-                RealDesktop.Create(def.realFile, TextResolver.Resolve(def.realText));
+                RealDesktop.Create(def.realFile, TextResolver.Resolve(def.realText)
+                    + (string.IsNullOrEmpty(def.title) ? "" : "\n\n\n――――――――――\n" + def.title));
 
             // エンドを見たら、その周回のデータは消して最初から
             SaveSystem.DeleteState(State.profile);
