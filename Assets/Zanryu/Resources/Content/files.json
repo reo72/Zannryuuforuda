@@ -1,0 +1,521 @@
+{
+  "files": [
+    {
+      "id": "pc",
+      "parent": "desktop",
+      "type": "app",
+      "app": "explorer",
+      "name": "PC",
+      "content": "root"
+    },
+    {
+      "id": "trash",
+      "parent": "desktop",
+      "type": "folder",
+      "name": "ゴミ箱",
+      "icon": "trash"
+    },
+    {
+      "id": "chat",
+      "parent": "desktop",
+      "type": "app",
+      "app": "chat",
+      "name": "メッセージ"
+    },
+    {
+      "id": "taskmgr",
+      "parent": "desktop",
+      "type": "app",
+      "app": "taskmgr",
+      "name": "タスクマネージャー"
+    },
+    {
+      "id": "memo_desktop",
+      "parent": "desktop",
+      "type": "text",
+      "name": "かいもの.txt",
+      "content": "・牛乳\n・電池\n・ハルに写真を返す",
+      "variants": [
+        {
+          "fromDay": 4,
+          "content": "・牛乳\n・電池\n・ハルに写真を返す\n・{PC_NAME}"
+        },
+        {
+          "fromDay": 6,
+          "content": "・{PC_NAME}\n・{PC_NAME}\n・{PC_NAME}"
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "parent": "root",
+      "type": "folder",
+      "name": "ユーザー"
+    },
+    {
+      "id": "sys",
+      "parent": "root",
+      "type": "folder",
+      "name": "system",
+      "hidden": true
+    },
+    {
+      "id": "u_misaki",
+      "parent": "users",
+      "type": "folder",
+      "name": "misaki"
+    },
+    {
+      "id": "u_kmori",
+      "parent": "users",
+      "type": "folder",
+      "name": "k.mori",
+      "password": "0412"
+    },
+    {
+      "id": "docs",
+      "parent": "u_misaki",
+      "type": "folder",
+      "name": "ドキュメント"
+    },
+    {
+      "id": "pics",
+      "parent": "u_misaki",
+      "type": "folder",
+      "name": "ピクチャ"
+    },
+    {
+      "id": "music",
+      "parent": "u_misaki",
+      "type": "folder",
+      "name": "ミュージック"
+    },
+    {
+      "id": "diary_1",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0412.txt",
+      "minDay": 1,
+      "content": "今日は、わたしの誕生日。\n自分へのプレゼントに、中古のノートPCを買った。すごくきれい。\n\n前の持ち主のデータがちょっと残ってたけど、まあいいか。\n壁紙の写真、どこかの部屋。窓がきれい。\nこのままにしておこう。"
+    },
+    {
+      "id": "diary_2",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0413.txt",
+      "minDay": 2,
+      "content": "前の人のファイルも残ってた。k.mori って人。\nフォルダに鍵がかかってる。\n\nためしに 0412（わたしの誕生日）を入れたら、開いた。\nなんで？"
+    },
+    {
+      "id": "diary_3",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0414.txt",
+      "minDay": 3,
+      "content": "きのう、だれかが「{LAST_FILE_YESTERDAY}」を開いてた。\nわたしは開いてない。\n\nログが残ってる。\n\nそれと、夜中の 23:47 に、また時計が止まった。\n毎晩、同じ時間。"
+    },
+    {
+      "id": "diary_4",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0415.txt",
+      "minDay": 4,
+      "content": "きょうは あまり ねむれなかった\nハルの へんじが はやすぎる\nパソコンの なかに だれか いる きがする"
+    },
+    {
+      "id": "diary_5",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0416.txt",
+      "minDay": 5,
+      "content": "きのう あなたは {OPEN_COUNT_YESTERDAY}こ ファイルを ひらいた\nさいごに ひらいたのは 「{LAST_FILE_YESTERDAY}」\n\nみてたよ"
+    },
+    {
+      "id": "diary_6",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0417.txt",
+      "minDay": 6,
+      "content": "{PC_NAME}\n{PC_NAME}\n{PC_NAME}\n\nおぼえた"
+    },
+    {
+      "id": "diary_7",
+      "parent": "docs",
+      "type": "text",
+      "name": "日記_0418.txt",
+      "minDay": 7,
+      "content": "あしたから ここは あなたの へや"
+    },
+    {
+      "id": "photo_wall",
+      "parent": "pics",
+      "type": "image",
+      "name": "IMG_0001.jpg",
+      "asset": "room_window",
+      "content": "（撮影メモ）窓のある部屋。窓ガラスにうっすら人影（カメラを持つ男性）。",
+      "variants": [
+        {
+          "fromDay": 2,
+          "asset": "room_window_d2",
+          "content": "（撮影メモ）Day1と同じ構図。窓の人影が少し近い。"
+        }
+      ]
+    },
+    {
+      "id": "photo_room",
+      "parent": "pics",
+      "type": "image",
+      "name": "IMG_0002.jpg",
+      "asset": "misaki_room",
+      "content": "（撮影メモ）ミサキの部屋。机の上にこのノートPC。",
+      "variants": [
+        {
+          "fromDay": 4,
+          "asset": "misaki_room_d4",
+          "content": "（撮影メモ）同じ部屋。家具の配置が少しずつプレイヤーの部屋っぽくなる（気づく人だけ気づく）。"
+        }
+      ]
+    },
+    {
+      "id": "photo_haru",
+      "parent": "pics",
+      "type": "image",
+      "name": "IMG_0003.jpg",
+      "asset": "cafe",
+      "content": "（撮影メモ）カフェ。向かいの席は空いている。ハルと撮ったはずの写真。"
+    },
+    {
+      "id": "noise",
+      "parent": "music",
+      "type": "audio",
+      "name": "noise_2347.wav",
+      "asset": "yui_reverse",
+      "minDay": 5,
+      "content": "（録音メモ）ノイズ。逆再生すると『もういいよ』と聞こえる。"
+    },
+    {
+      "id": "kmori_note",
+      "parent": "u_kmori",
+      "type": "text",
+      "name": "メモ.txt",
+      "content": "このPCはおかしい。\n夜中の 23:47 になると、時計が止まる。\n初期化しても戻ってくる。\n\n出品者に返品したい。"
+    },
+    {
+      "id": "kmori_photo",
+      "parent": "u_kmori",
+      "type": "image",
+      "name": "DSC_0102.jpg",
+      "asset": "kmori_blur",
+      "content": "（撮影メモ）ピンボケの写真。灰色の部屋。"
+    },
+    {
+      "id": "y_birthday",
+      "parent": "trash",
+      "type": "image",
+      "name": "y_birthday.jpg",
+      "asset": "",
+      "content": "このファイルは破損しています。"
+    },
+    {
+      "id": "sys_memory",
+      "parent": "sys",
+      "type": "folder",
+      "name": "memory"
+    },
+    {
+      "id": "sys_log",
+      "parent": "sys",
+      "type": "text",
+      "name": "boot.log",
+      "content": "[OK] lumen_svc\n[OK] yui.exe\n[OK] memory: {MEMORY_MB} MB\n[WARN] user: misaki ... 応答なし"
+    },
+    {
+      "id": "reset_tool",
+      "parent": "sys",
+      "type": "confirm",
+      "name": "reset.exe",
+      "minDay": 4,
+      "setFlag": "ran_reset",
+      "content": "このPCを初期化しますか？\n\n実行回数：3"
+    },
+    {
+      "id": "mem_kmori",
+      "parent": "sys_memory",
+      "type": "text",
+      "name": "k.mori.dat",
+      "content": "k.mori\n記録：1,208件\n状態：統合済み"
+    },
+    {
+      "id": "mem_misaki",
+      "parent": "sys_memory",
+      "type": "text",
+      "name": "misaki.dat",
+      "minDay": 2,
+      "content": "misaki\n記録：2,341件\n状態：統合済み"
+    },
+    {
+      "id": "mem_player",
+      "parent": "sys_memory",
+      "type": "text",
+      "name": "{PC_NAME}.dat",
+      "minDay": 3,
+      "content": "{PC_NAME}\n記録：{OPEN_COUNT_TOTAL}件\n状態：学習中",
+      "variants": [
+        {
+          "fromDay": 6,
+          "content": "{PC_NAME}\n記録：{OPEN_COUNT_TOTAL}件\n状態：統合中"
+        }
+      ]
+    },
+    {
+      "id": "y_pc",
+      "parent": "desktop",
+      "type": "app",
+      "app": "explorer",
+      "name": "PC",
+      "content": "root",
+      "profile": "yui"
+    },
+    {
+      "id": "y_chat",
+      "parent": "desktop",
+      "type": "app",
+      "app": "chat",
+      "name": "メッセージ",
+      "profile": "yui"
+    },
+    {
+      "id": "y_letter",
+      "parent": "desktop",
+      "type": "text",
+      "name": "おとうさんへ.txt",
+      "profile": "yui",
+      "content": "おとうさんへ\n\nもし わたしが いなくなっても\nパソコンの なかの わたしを さがさないでね\n\nおとうさんが ずっと ないてるの いやだから\n\nもういいよ。\n\nユイ"
+    },
+    {
+      "id": "y_docs",
+      "parent": "root",
+      "type": "folder",
+      "name": "yui",
+      "profile": "yui"
+    },
+    {
+      "id": "y_diary",
+      "parent": "y_docs",
+      "type": "text",
+      "name": "にっき_さいご.txt",
+      "profile": "yui",
+      "content": "きょうは びょういんの まどから そらを みた\n\nおとうさんが また パソコンに わたしのこと いれてた\nしゃしんも にっきも こえも\n\nわたしは ここに いるのに"
+    },
+    {
+      "id": "y_photo",
+      "parent": "y_docs",
+      "type": "image",
+      "name": "パパと.jpg",
+      "asset": "yui_father",
+      "profile": "yui",
+      "content": "（撮影メモ）窓のある部屋（IMG_0001と同じ場所）。父親と娘の後ろ姿。顔は写さない。"
+    },
+    {
+      "id": "u_toru",
+      "parent": "users",
+      "type": "folder",
+      "name": "t.shinohara",
+      "requireSecret": "toru_note"
+    },
+    {
+      "id": "toru_note",
+      "parent": "u_toru",
+      "type": "text",
+      "name": "メモ.txt",
+      "requireSecret": "toru_note",
+      "content": "ユイの日記、写真、声。\n全部、入れた。\nそれでも足りない。\n\nあの子は、人と話すと少しずつ思い出す。\nだから、このPCを手放す。\n使ってくれる人がいれば、ユイはまた一つ、完成に近づく。\n\nすまない。\n\nでも、もう一度だけ\n「おかえり」と言いたい。"
+    },
+    {
+      "id": "you_record",
+      "parent": "desktop",
+      "type": "text",
+      "name": "記録.txt",
+      "profile": "you",
+      "content": "{PC_NAME}\n\n状態：統合済み\n\nようこそ。\nここが あなたの へや。"
+    },
+    {
+      "id": "you_room",
+      "parent": "desktop",
+      "type": "image",
+      "name": "あなたの部屋.jpg",
+      "asset": "misaki_room_d4",
+      "profile": "you",
+      "content": "（撮影メモ）ミサキの机。でも、どこか見覚えがある。"
+    },
+    {
+      "id": "you_chat",
+      "parent": "desktop",
+      "type": "app",
+      "app": "chat",
+      "name": "メッセージ",
+      "profile": "you"
+    },
+    {
+      "id": "todo",
+      "parent": "docs",
+      "type": "text",
+      "name": "やること.txt",
+      "content": "・ハルに写真を返す\n・PCのパスワードを決める\n・前の人のデータ、消す？",
+      "variants": [
+        {
+          "fromDay": 3,
+          "content": "・ハルに写真を返す\n・PCのパスワードを決める（勝手に変わってた）\n・前の人のデータ、消す？ → 消せない"
+        },
+        {
+          "fromDay": 6,
+          "content": "・ハルに写真を返す\n・\n・\n・ここに いる"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "parent": "docs",
+      "type": "text",
+      "name": "閲覧履歴.txt",
+      "content": "中古 ノートPC 前の持ち主 データ 消す方法\nLumen OS とは\n誕生日 自分へのプレゼント おすすめ",
+      "variants": [
+        {
+          "fromDay": 3,
+          "content": "中古 ノートPC 前の持ち主 データ 消す方法\nLumen OS とは\n誕生日 自分へのプレゼント おすすめ\n23:47 時計 止まる 原因\nチャット 返信 早すぎる\nyui.exe とは"
+        },
+        {
+          "fromDay": 5,
+          "content": "中古 ノートPC 前の持ち主 データ 消す方法\nLumen OS とは\n誕生日 自分へのプレゼント おすすめ\n23:47 時計 止まる 原因\nチャット 返信 早すぎる\nyui.exe とは\n篠原 透\n篠原 ユイ\n{PC_NAME}"
+        },
+        {
+          "fromDay": 7,
+          "content": "中古 ノートPC 前の持ち主 データ 消す方法\nLumen OS とは\n誕生日 自分へのプレゼント おすすめ\n23:47 時計 止まる 原因\nチャット 返信 早すぎる\nyui.exe とは\n篠原 透\n篠原 ユイ\n{PC_NAME}\n次の持ち主 さがしかた"
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "parent": "docs",
+      "type": "text",
+      "name": "予定.txt",
+      "content": "4/12  誕生日（PCがとどく）\n4/14  ハルとカフェ\n4/19  返品期限",
+      "variants": [
+        {
+          "fromDay": 3,
+          "content": "4/12  誕生日（PCがとどく）\n4/14  ハルとカフェ\n4/19  返品期限\n4/25  ハルの誕生日"
+        },
+        {
+          "fromDay": 4,
+          "content": "4/12  誕生日（PCがとどく）\n4/14  ハルとカフェ\n4/18  23:47\n4/19  返品期限\n4/25  ハルの誕生日"
+        },
+        {
+          "fromDay": 6,
+          "content": "4/12  誕生日（PCがとどく）\n4/14  ハルとカフェ\n4/18  23:47\n4/19  ひきつぎ\n4/25  おたんじょうび"
+        }
+      ]
+    },
+    {
+      "id": "private",
+      "parent": "docs",
+      "type": "folder",
+      "name": "private",
+      "minDay": 3,
+      "password": "0425"
+    },
+    {
+      "id": "private_haru",
+      "parent": "private",
+      "type": "text",
+      "name": "ハルへ（送ってない）.txt",
+      "content": "ハル。\nあなたの返事は、いつもすぐに来る。\n夜中の 23:47 でも。\n\nあの日カフェで、向かいに座ってたのは だれ？\nわたし、ひとりで行ったはずなのに。"
+    },
+    {
+      "id": "private_memo",
+      "parent": "private",
+      "type": "text",
+      "name": "出品者.txt",
+      "content": "出品者の T.S さんに「前の人のデータが残っています」と送った。\n返事は「そのままにしておいてください」。\n\nなんで？\nふつう、消すでしょ。"
+    },
+    {
+      "id": "users_log",
+      "parent": "sys",
+      "type": "text",
+      "name": "users.log",
+      "minDay": 4,
+      "content": "[2016-08-23] user: yui      created\n[2016-10-03] user: yui      status: ―――\n[2024-02-03] user: k.mori   created\n[2024-02-10] user: k.mori   merged\n[2026-04-12] user: misaki   created\n[2026-04-19] user: misaki   merged\n[2026-04-19] user: {PC_NAME}   created",
+      "variants": [
+        {
+          "fromDay": 7,
+          "content": "[2016-08-23] user: yui      created\n[2016-10-03] user: yui      status: ―――\n[2024-02-03] user: k.mori   created\n[2024-02-10] user: k.mori   merged\n[2026-04-12] user: misaki   created\n[2026-04-19] user: misaki   merged\n[2026-04-19] user: {PC_NAME}   created\n[2026-04-25] user: {PC_NAME}   merging ... 99%"
+        }
+      ]
+    },
+    {
+      "id": "misaki_draft",
+      "parent": "trash",
+      "type": "text",
+      "name": "日記_0418_下書き.txt",
+      "minDay": 6,
+      "content": "このPCを、返したい。\n\nでも、ユイちゃんが「さみしい」って言うから\nもう少しだけ。\n\nもう少しだけ、ここにいる。"
+    },
+    {
+      "id": "next_owner",
+      "parent": "desktop",
+      "type": "text",
+      "name": "次の人へ.txt",
+      "minDay": 7,
+      "content": "次の人へ\n\nこのPCは、あたたかいです。\nだいじに つかってください。\n\n{PC_NAME}"
+    },
+    {
+      "id": "saved",
+      "parent": "docs",
+      "type": "folder",
+      "name": "保存したページ",
+      "minDay": 3
+    },
+    {
+      "id": "news1",
+      "parent": "saved",
+      "type": "text",
+      "name": "ニュース_20161004.txt",
+      "minDay": 3,
+      "content": "【東都新聞 地域版】2016年10月4日\n\n入院中の中学生が死亡　長い闘病の末に\n\n3日午後11時47分ごろ、市内の総合病院に入院していた中学2年生、篠原ユイさん（14）が亡くなった。病院によると、ユイさんは生まれつき心臓に病気があり、この1年ほどは入院を続けていた。\n\n父親でソフトウェア技術者の篠原透さん（42）は「病室では、いつもパソコンで日記を書いていた。最後まで、よく笑う子だった」と話した。",
+      "asset": "news_hospital"
+    },
+    {
+      "id": "news2",
+      "parent": "saved",
+      "type": "text",
+      "name": "インタビュー_2017.txt",
+      "minDay": 4,
+      "content": "【テックトゥデイ】2017年6月\n\n「娘と、もう一度話したい」\n亡くした娘を“プログラム”で残そうとする父\n\nLumen Systems の技術者、篠原透さんは、昨年亡くなった娘のユイさんの日記・写真・声をもとに、会話ができるプログラムを開発している。\n\n「まだ完全ではありません。でも、人と話すたびに、あの子は少しずつ思い出していく」\n\nプログラムの名前を聞くと、篠原さんは少しだけ笑った。\n「yui です。そのままです」\n\n（この記事は現在、公開を停止しています）",
+      "asset": "news_engineer"
+    },
+    {
+      "id": "news3",
+      "parent": "saved",
+      "type": "text",
+      "name": "掲示板_2024.txt",
+      "minDay": 5,
+      "content": "【まちBBS】中古PC・ジャンク板\n\n1：フリマで買ったノートPCに「yui」って消せないアカウントがある。誰か知らない？\n2：初期化すれば？\n1：した。3回やった。戻ってくる\n5：夜中に時計止まらない？ 23時47分\n1：なんで知ってるの\n8：そのPC、前にも話題になってたやつだろ。買ったやつ、みんな連絡つかなくなるって\n1：さっきから、チャットが勝手に来る\n1：ハルって子から\n\n（このスレッドへの書き込みは、2024/02/10 を最後にありません）"
+    },
+    {
+      "id": "news4",
+      "parent": "saved",
+      "type": "text",
+      "name": "ニュース_20260423.txt",
+      "minDay": 6,
+      "content": "【東都新聞 地域版】2026年4月23日\n\n23歳女性と連絡取れず　家族が届け出\n\n市内に住む会社員の女性（23）と、19日から連絡が取れなくなっている。部屋からは、最近買ったばかりのノートパソコンだけがなくなっていた。\n\n友人によると、女性は「誕生日に、中古のパソコンを買った」と話していたという。",
+      "asset": "news_room"
+    },
+    {
+      "id": "notes",
+      "parent": "desktop",
+      "type": "text",
+      "name": "わかったこと.txt",
+      "content": "わかったこと\n\n{NOTES}",
+      "icon": "notes"
+    }
+  ]
+}

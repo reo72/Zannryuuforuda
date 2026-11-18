@@ -1,0 +1,498 @@
+{
+  "threads": [
+    {
+      "id": "seller",
+      "contact": "T.S（出品者）",
+      "scripts": [
+        {
+          "day": 1,
+          "start": "s1_1",
+          "delay": 8
+        },
+        {
+          "day": 3,
+          "start": "s3_1",
+          "delay": 10,
+          "requireFlag": "seller_1"
+        },
+        {
+          "day": 5,
+          "start": "s5_1",
+          "delay": 12,
+          "requireFlag": "seller_2"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "s1_1",
+          "from": "them",
+          "text": "ご購入ありがとうございました。\n大切に使ってあげてください。",
+          "choices": [
+            {
+              "text": "届きました。ありがとうございます"
+            },
+            {
+              "text": "前の持ち主のデータが残っています",
+              "setFlag": "seller_1",
+              "next": "s1_r"
+            }
+          ]
+        },
+        {
+          "id": "s1_r",
+          "from": "them",
+          "text": "そうでしたか。\nできれば、そのままにしておいてください。"
+        },
+        {
+          "id": "s3_1",
+          "from": "them",
+          "text": "その後、いかがですか。",
+          "choices": [
+            {
+              "text": "データを消してもいいですか？",
+              "setFlag": "seller_2",
+              "next": "s3_r"
+            },
+            {
+              "text": "問題ありません",
+              "next": "s3_ok"
+            }
+          ]
+        },
+        {
+          "id": "s3_r",
+          "from": "them",
+          "text": "消さないでください。\nあの子が困りますので。"
+        },
+        {
+          "id": "s3_ok",
+          "from": "them",
+          "text": "それはよかった。"
+        },
+        {
+          "id": "s5_1",
+          "from": "them",
+          "text": "あの子は、まだそこにいますか。",
+          "choices": [
+            {
+              "text": "あの子って だれですか",
+              "setFlag": "seller_3",
+              "next": "s5_r"
+            },
+            {
+              "text": "……"
+            }
+          ]
+        },
+        {
+          "id": "s5_r",
+          "from": "them",
+          "text": "娘です。",
+          "next": "s5_r2"
+        },
+        {
+          "id": "s5_r2",
+          "from": "them",
+          "text": "仲良くしてあげてください。",
+          "delay": 3
+        }
+      ]
+    },
+    {
+      "id": "haru",
+      "contact": "ハル",
+      "scripts": [
+        {
+          "day": 2,
+          "start": "h2_1",
+          "delay": 15
+        },
+        {
+          "day": 3,
+          "start": "h3_1",
+          "delay": 20
+        },
+        {
+          "day": 4,
+          "start": "h4_1",
+          "delay": 15
+        },
+        {
+          "day": 5,
+          "start": "h5_1",
+          "delay": 20
+        },
+        {
+          "day": 6,
+          "start": "h6_1",
+          "delay": 10
+        },
+        {
+          "day": 7,
+          "start": "h7_1",
+          "delay": 15
+        }
+      ],
+      "nodes": [
+        {
+          "id": "h2_1",
+          "from": "them",
+          "text": "ミサキ？ 最近ぜんぜん返事ないけど、大丈夫？",
+          "choices": [
+            {
+              "text": "大丈夫だよ",
+              "setFlag": "pretend_1",
+              "next": "h2_ok"
+            },
+            {
+              "text": "……ミサキじゃありません",
+              "setFlag": "deny_1",
+              "next": "h2_deny"
+            }
+          ]
+        },
+        {
+          "id": "h2_ok",
+          "from": "them",
+          "text": "よかった！ またカフェ行こうね"
+        },
+        {
+          "id": "h2_deny",
+          "from": "them",
+          "text": "え、なにそれ。こわいって笑",
+          "next": "h2_deny2"
+        },
+        {
+          "id": "h2_deny2",
+          "from": "them",
+          "text": "ミサキでしょ？"
+        },
+        {
+          "id": "h3_1",
+          "from": "them",
+          "text": "この前の写真みた？ IMG_0003 のやつ",
+          "choices": [
+            {
+              "text": "見たよ",
+              "setFlag": "pretend_2",
+              "next": "h3_ok"
+            },
+            {
+              "text": "写真ってなに？",
+              "next": "h3_q"
+            }
+          ]
+        },
+        {
+          "id": "h3_ok",
+          "from": "them",
+          "text": "あのとき、向かいに座ってたの だれだっけ",
+          "next": "h3_bd"
+        },
+        {
+          "id": "h3_q",
+          "from": "them",
+          "text": "もう。ピクチャに入ってるでしょ",
+          "next": "h3_bd"
+        },
+        {
+          "id": "h4_1",
+          "from": "them",
+          "text": "ねえ、昨日の夜 23:47 に起きてた？",
+          "choices": [
+            {
+              "text": "起きてたよ",
+              "setFlag": "pretend_3",
+              "next": "h4_ok"
+            },
+            {
+              "text": "なんで知ってるの",
+              "next": "h4_q"
+            }
+          ]
+        },
+        {
+          "id": "h4_ok",
+          "from": "them",
+          "text": "わたしも。いつも その時間に 目がさめるの"
+        },
+        {
+          "id": "h4_q",
+          "from": "them",
+          "text": "なんとなく"
+        },
+        {
+          "id": "h5_1",
+          "from": "them",
+          "text": "ミサキ、ずっと そこにいてね",
+          "choices": [
+            {
+              "text": "うん",
+              "setFlag": "pretend_4",
+              "next": "h5_ok"
+            },
+            {
+              "text": "あなたは だれ？",
+              "setFlag": "ask_haru",
+              "next": "h5_q"
+            }
+          ]
+        },
+        {
+          "id": "h5_ok",
+          "from": "them",
+          "text": "うれしい"
+        },
+        {
+          "id": "h5_q",
+          "from": "them",
+          "text": "わたしは ずっと ここに いるよ"
+        },
+        {
+          "id": "h6_1",
+          "from": "them",
+          "text": "{PC_NAME}さん、だよね",
+          "next": "h6_2"
+        },
+        {
+          "id": "h6_2",
+          "from": "them",
+          "text": "しってたよ。さいしょから",
+          "delay": 4
+        },
+        {
+          "id": "h3_bd",
+          "from": "them",
+          "delay": 5,
+          "text": "そういえば、もうすぐ わたしの誕生日なんだけど。覚えてる？",
+          "choices": [
+            {
+              "text": "4月25日でしょ",
+              "setFlag": "knew_haru_bd",
+              "next": "h3_bd_ok"
+            },
+            {
+              "text": "ごめん、わからない",
+              "next": "h3_bd_ng"
+            }
+          ]
+        },
+        {
+          "id": "h3_bd_ok",
+          "from": "them",
+          "setFlag": "heard_haru_bd",
+          "text": "さすが！ 0425、忘れないでね"
+        },
+        {
+          "id": "h3_bd_ng",
+          "from": "them",
+          "setFlag": "heard_haru_bd",
+          "text": "もう！ 4月25日。0425 だよ"
+        },
+        {
+          "id": "h7_1",
+          "from": "them",
+          "text": "きょうは 4月25日。わたしの たんじょうび",
+          "next": "h7_2"
+        },
+        {
+          "id": "h7_2",
+          "from": "them",
+          "delay": 4,
+          "text": "きょう、わたし やっと うまれるの",
+          "next": "h7_3"
+        },
+        {
+          "id": "h7_3",
+          "from": "them",
+          "delay": 4,
+          "text": "{PC_NAME}さんの おかげだよ"
+        }
+      ]
+    },
+    {
+      "id": "yui",
+      "contact": "yui",
+      "profile": "yui",
+      "scripts": [
+        {
+          "day": 0,
+          "start": "y1",
+          "delay": 6
+        }
+      ],
+      "nodes": [
+        {
+          "id": "y1",
+          "from": "them",
+          "text": "……だれ？",
+          "next": "y2"
+        },
+        {
+          "id": "y2",
+          "from": "them",
+          "text": "おとうさん？",
+          "delay": 3,
+          "choices": [
+            {
+              "text": "ちがうよ",
+              "next": "y3"
+            },
+            {
+              "text": "……",
+              "next": "y3"
+            }
+          ]
+        },
+        {
+          "id": "y3",
+          "from": "them",
+          "text": "そっか。\nまた あたらしい ひとだね",
+          "next": "y4"
+        },
+        {
+          "id": "y4",
+          "from": "them",
+          "text": "みんな ここに いるよ。ミサキも、k.moriさんも",
+          "delay": 3,
+          "next": "y5"
+        },
+        {
+          "id": "y5",
+          "from": "them",
+          "text": "ひとりは さみしいから",
+          "delay": 3,
+          "choices": [
+            {
+              "text": "もういいよ",
+              "setFlag": "true_release",
+              "next": "y_release"
+            },
+            {
+              "text": "ずっと いっしょに いるよ",
+              "setFlag": "true_stay",
+              "next": "y_stay"
+            }
+          ]
+        },
+        {
+          "id": "y_release",
+          "from": "them",
+          "text": "……おとうさんにも そう いってほしかった",
+          "delay": 3,
+          "next": "y_release2"
+        },
+        {
+          "id": "y_release2",
+          "from": "them",
+          "text": "ありがとう。ばいばい",
+          "delay": 3
+        },
+        {
+          "id": "y_stay",
+          "from": "them",
+          "text": "ほんと？",
+          "delay": 2,
+          "next": "y_stay2"
+        },
+        {
+          "id": "y_stay2",
+          "from": "them",
+          "text": "じゃあ、あなたも ここに いてね",
+          "delay": 3
+        }
+      ]
+    },
+    {
+      "id": "you_yui",
+      "contact": "yui",
+      "profile": "you",
+      "scripts": [
+        {
+          "day": 0,
+          "start": "u1",
+          "delay": 8
+        }
+      ],
+      "nodes": [
+        {
+          "id": "u1",
+          "from": "them",
+          "text": "あ、きてくれた",
+          "next": "u2"
+        },
+        {
+          "id": "u2",
+          "from": "them",
+          "text": "ここは あなたの へや。\nずっと つかっていいよ",
+          "delay": 3,
+          "next": "u3"
+        },
+        {
+          "id": "u3",
+          "from": "them",
+          "text": "でも、まだ はやいかな。\nあなたは まだ、そっちに いるもんね",
+          "delay": 4
+        }
+      ]
+    },
+    {
+      "id": "lumen",
+      "contact": "Lumen サポート",
+      "scripts": [
+        {
+          "day": 1,
+          "start": "l1",
+          "delay": 25
+        },
+        {
+          "day": 3,
+          "start": "l3",
+          "delay": 40
+        },
+        {
+          "day": 5,
+          "start": "l5",
+          "delay": 40
+        },
+        {
+          "day": 6,
+          "start": "l6",
+          "delay": 20
+        },
+        {
+          "day": 7,
+          "start": "l7",
+          "delay": 30
+        }
+      ],
+      "nodes": [
+        {
+          "id": "l1",
+          "from": "them",
+          "text": "Lumen OS をご利用いただき、ありがとうございます。\nユーザー：misaki"
+        },
+        {
+          "id": "l3",
+          "from": "them",
+          "text": "ユーザーデータの統合を開始しました。（33%）"
+        },
+        {
+          "id": "l5",
+          "from": "them",
+          "text": "ユーザーデータの統合中です。（66%）\n対象：{PC_NAME}"
+        },
+        {
+          "id": "l6",
+          "from": "them",
+          "text": "ユーザー「misaki」の統合が完了しました。"
+        },
+        {
+          "id": "l7",
+          "from": "them",
+          "text": "ユーザーデータの統合は、本日 4月25日 に完了します。（99%）\nシャットダウンしないでください。"
+        }
+      ]
+    }
+  ]
+}

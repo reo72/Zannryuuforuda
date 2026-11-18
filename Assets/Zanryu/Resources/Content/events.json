@@ -1,0 +1,359 @@
+{
+  "events": [
+    {
+      "id": "d1_notice",
+      "trigger": "dayStart",
+      "day": 1,
+      "delay": 3,
+      "actions": [
+        {
+          "type": "toast",
+          "a": "以前のユーザーのデータが残っています"
+        }
+      ]
+    },
+    {
+      "id": "d2_wallpaper",
+      "trigger": "dayStart",
+      "day": 2,
+      "actions": [
+        {
+          "type": "wallpaper",
+          "a": "room_window_d2"
+        }
+      ]
+    },
+    {
+      "id": "d3_rename",
+      "trigger": "fileOpened",
+      "target": "photo_room",
+      "day": 3,
+      "delay": 2.5,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 0.15
+        },
+        {
+          "type": "rename",
+          "a": "photo_room",
+          "b": "みてる.jpg"
+        },
+        {
+          "type": "wait",
+          "f": 1.0
+        },
+        {
+          "type": "say",
+          "a": "……今、ファイルの名前が変わった？"
+        }
+      ]
+    },
+    {
+      "id": "d4_quiet",
+      "trigger": "dayStart",
+      "day": 4,
+      "actions": [
+        {
+          "type": "ambient",
+          "a": "",
+          "f": 0.3
+        }
+      ]
+    },
+    {
+      "id": "d4_cursor",
+      "trigger": "timer",
+      "day": 4,
+      "delay": 45,
+      "actions": [
+        {
+          "type": "cursor",
+          "a": "memo_desktop",
+          "f": 1.6,
+          "b": "open"
+        },
+        {
+          "type": "say",
+          "a": "……今、マウスに触ってなかったよな。"
+        }
+      ]
+    },
+    {
+      "id": "d5_diary",
+      "trigger": "fileOpened",
+      "target": "diary_5",
+      "day": 5,
+      "delay": 2,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 0.4
+        },
+        {
+          "type": "wait",
+          "f": 0.6
+        },
+        {
+          "type": "message",
+          "a": "エラー",
+          "b": "「{LAST_FILE}」は 別のユーザーが使用中です。"
+        }
+      ]
+    },
+    {
+      "id": "d5_quiet",
+      "trigger": "dayStart",
+      "day": 5,
+      "actions": [
+        {
+          "type": "ambient",
+          "a": "",
+          "f": 0.15
+        }
+      ]
+    },
+    {
+      "id": "d6_silence",
+      "trigger": "dayStart",
+      "day": 6,
+      "actions": [
+        {
+          "type": "ambient",
+          "a": "",
+          "f": 0.0
+        }
+      ]
+    },
+    {
+      "id": "d6_close",
+      "trigger": "timer",
+      "day": 6,
+      "delay": 30,
+      "actions": [
+        {
+          "type": "closeAll"
+        },
+        {
+          "type": "wait",
+          "f": 1.2
+        },
+        {
+          "type": "message",
+          "a": "システム",
+          "b": "ユーザー「misaki」は存在しません。"
+        },
+        {
+          "type": "say",
+          "a": "misaki が……存在しない？\nじゃあ、今ログインしているのは誰なんだ。"
+        }
+      ]
+    },
+    {
+      "id": "d7_silence",
+      "trigger": "dayStart",
+      "day": 7,
+      "actions": [
+        {
+          "type": "ambient",
+          "a": "",
+          "f": 0.0
+        }
+      ]
+    },
+    {
+      "id": "d7_soon",
+      "trigger": "timer",
+      "day": 7,
+      "delay": 20,
+      "actions": [
+        {
+          "type": "toast",
+          "a": "もうすぐ だね"
+        }
+      ]
+    },
+    {
+      "id": "end0_kill",
+      "trigger": "flag",
+      "target": "killed_yui",
+      "actions": [
+        {
+          "type": "sayAsync",
+          "a": "……っ！？"
+        },
+        {
+          "type": "closeAll"
+        },
+        {
+          "type": "glitch",
+          "f": 1.0
+        },
+        {
+          "type": "wait",
+          "f": 0.8
+        },
+        {
+          "type": "ending",
+          "a": "end0"
+        }
+      ]
+    },
+    {
+      "id": "end2_reset",
+      "trigger": "flag",
+      "target": "ran_reset",
+      "actions": [
+        {
+          "type": "closeAll"
+        },
+        {
+          "type": "glitch",
+          "f": 1.5
+        },
+        {
+          "type": "wait",
+          "f": 1.0
+        },
+        {
+          "type": "ending",
+          "a": "end2"
+        }
+      ]
+    },
+    {
+      "id": "true_release",
+      "trigger": "flag",
+      "target": "true_release",
+      "profile": "yui",
+      "delay": 8,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 0.6
+        },
+        {
+          "type": "wait",
+          "f": 0.5
+        },
+        {
+          "type": "ending",
+          "a": "true_release"
+        }
+      ]
+    },
+    {
+      "id": "true_stay",
+      "trigger": "flag",
+      "target": "true_stay",
+      "profile": "yui",
+      "delay": 7,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 1.2
+        },
+        {
+          "type": "ending",
+          "a": "true_stay"
+        }
+      ]
+    },
+    {
+      "id": "d5_meta",
+      "trigger": "fileOpened",
+      "target": "diary_5",
+      "day": 5,
+      "delay": 4,
+      "actions": [
+        {
+          "type": "realFile",
+          "a": "みてたよ.txt",
+          "b": "きょう あなたが ひらいたもの\n\n{OPENED_LIST_TODAY}\n\nみてたよ"
+        }
+      ]
+    },
+    {
+      "id": "memo_name_seen",
+      "trigger": "fileOpened",
+      "target": "memo_desktop",
+      "minDay": 4,
+      "actions": [
+        {
+          "type": "flag",
+          "a": "saw_memo_name"
+        },
+        {
+          "type": "wait",
+          "f": 1.5
+        },
+        {
+          "type": "say",
+          "a": "……いちばん下の行。これ、自分の名前だ。"
+        }
+      ]
+    },
+    {
+      "id": "rev_noise",
+      "trigger": "flag",
+      "target": "reversed_noise",
+      "delay": 1.2,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 0.25
+        },
+        {
+          "type": "say",
+          "a": "……「もういいよ」？",
+          "b": ""
+        },
+        {
+          "type": "say",
+          "a": "女の子の声だ。ミサキじゃない。"
+        }
+      ]
+    },
+    {
+      "id": "hist_d5",
+      "trigger": "fileOpened",
+      "target": "history",
+      "minDay": 5,
+      "delay": 1.0,
+      "actions": [
+        {
+          "type": "say",
+          "a": "篠原 透……篠原 ユイ……？"
+        },
+        {
+          "type": "say",
+          "a": "……いちばん下は、自分の名前だ。"
+        }
+      ]
+    },
+    {
+      "id": "d6_trash",
+      "trigger": "dayStart",
+      "day": 6,
+      "delay": 12,
+      "actions": [
+        {
+          "type": "toast",
+          "a": "ゴミ箱\n1個のファイルが追加されました"
+        }
+      ]
+    },
+    {
+      "id": "d7_next",
+      "trigger": "dayStart",
+      "day": 7,
+      "delay": 6,
+      "actions": [
+        {
+          "type": "say",
+          "a": "……デスクトップに、見覚えのないファイルがある。"
+        }
+      ]
+    }
+  ]
+}

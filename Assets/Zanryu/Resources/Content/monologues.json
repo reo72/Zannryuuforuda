@@ -1,0 +1,647 @@
+{
+  "intros": [
+    {
+      "id": "in_d1",
+      "day": 1,
+      "lines": [
+        "中古で買ったノートPC、やっと届いた。",
+        "……あれ？ 前の持ち主のアカウントが残ってる。\n「初期化済み」って書いてあったのに。",
+        "とりあえず、中を見てみるか。"
+      ]
+    },
+    {
+      "id": "in_d2",
+      "day": 2,
+      "lines": [
+        "……壁紙、こんな写真だったっけ。"
+      ]
+    },
+    {
+      "id": "in_d3",
+      "day": 3,
+      "lines": [
+        "昨日なにを開いたかなんて、いちいち覚えてない。",
+        "……でも、このPCは覚えているのかもしれない。"
+      ]
+    },
+    {
+      "id": "in_d4",
+      "day": 4,
+      "lines": [
+        "今日は、ファンの音がやけに静かだ。"
+      ]
+    },
+    {
+      "id": "in_d5",
+      "day": 5,
+      "lines": [
+        "昨日、自分が何をしたか。\n全部、見られている気がする。"
+      ]
+    },
+    {
+      "id": "in_d6",
+      "day": 6,
+      "lines": [
+        "……静かすぎる。"
+      ]
+    },
+    {
+      "id": "in_d7",
+      "day": 7,
+      "lines": [
+        "4月25日。7日目。",
+        "……ハルの誕生日だ。",
+        "このPCを、どうするか決めないと。"
+      ]
+    },
+    {
+      "id": "in_yui",
+      "profile": "yui",
+      "lines": [
+        "……知らないアカウントだ。",
+        "ここが、いちばん最初の持ち主の場所……？"
+      ]
+    },
+    {
+      "id": "in_you",
+      "profile": "you",
+      "lines": [
+        "……ここ、自分の……？",
+        "いや、自分のアカウントなんて、作った覚えはない。"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "re_diary1",
+      "file": "diary_1",
+      "lines": [
+        "前の持ち主の日記だ。",
+        "日付は 0412……4月12日が、この人の誕生日なのか。"
+      ]
+    },
+    {
+      "id": "re_diary2",
+      "file": "diary_2",
+      "lines": [
+        "0412……誕生日がパスワード？",
+        "k.mori のフォルダで試せるかもしれない。"
+      ]
+    },
+    {
+      "id": "re_diary3",
+      "file": "diary_3",
+      "lines": [
+        "「{LAST_FILE_YESTERDAY}」……？",
+        "それ、昨日 自分が開いたファイルだ。",
+        "……23:47。毎晩、時計が止まる？"
+      ]
+    },
+    {
+      "id": "re_diary4",
+      "file": "diary_4",
+      "lines": [
+        "漢字が、減ってる。\n本当に同じ人が書いたのか……？"
+      ]
+    },
+    {
+      "id": "re_diary5",
+      "file": "diary_5",
+      "lines": [
+        "{OPEN_COUNT_YESTERDAY}個……。",
+        "数えてなかったけど、たぶん合ってる。"
+      ]
+    },
+    {
+      "id": "re_diary6",
+      "file": "diary_6",
+      "lines": [
+        "……これ、自分の名前だ。"
+      ]
+    },
+    {
+      "id": "re_kmori",
+      "file": "kmori_note",
+      "lines": [
+        "23:47 に時計が止まる……？",
+        "初期化しても、戻ってくる。"
+      ]
+    },
+    {
+      "id": "re_birthday",
+      "file": "y_birthday",
+      "lines": [
+        "壊れてる。……y？ 誰の誕生日だろう。"
+      ]
+    },
+    {
+      "id": "re_reset",
+      "file": "reset_tool",
+      "lines": [
+        "初期化ツール……実行回数 3回。",
+        "前にも、誰かがこれを消そうとしたんだ。"
+      ]
+    },
+    {
+      "id": "re_memplayer",
+      "file": "mem_player",
+      "lines": [
+        "……なんで、ここに自分の名前があるんだ。"
+      ]
+    },
+    {
+      "id": "re_noise",
+      "file": "noise",
+      "lines": [
+        "ノイズしか聞こえない。",
+        "……逆から再生したら、何か聞こえるのかもしれない。"
+      ]
+    },
+    {
+      "id": "re_taskmgr",
+      "file": "taskmgr",
+      "lines": [
+        "yui.exe……？ 説明が「家族」になってる。"
+      ]
+    },
+    {
+      "id": "re_sys",
+      "file": "sys",
+      "lines": [
+        "隠しフォルダか……。"
+      ]
+    },
+    {
+      "id": "re_letter",
+      "file": "y_letter",
+      "profile": "yui",
+      "lines": [
+        "……「もういいよ」。"
+      ]
+    },
+    {
+      "id": "re_toru",
+      "file": "toru_note",
+      "lines": [
+        "t.shinohara……篠原 透。",
+        "出品者の T.S は、ユイの父親だったんだ。"
+      ]
+    },
+    {
+      "id": "re_diary5_meta",
+      "file": "diary_5",
+      "delay": 6,
+      "lines": [
+        "……デスクトップに、何か増えてない？"
+      ]
+    },
+    {
+      "id": "re_todo",
+      "file": "todo",
+      "lines": [
+        "ミサキのやることリストか。",
+        "「前の人のデータ、消す？」……ミサキも同じことを考えてたんだ。"
+      ]
+    },
+    {
+      "id": "re_history",
+      "file": "history",
+      "lines": [
+        "検索の履歴……人のを見るのは、少し気まずい。"
+      ]
+    },
+    {
+      "id": "re_calendar",
+      "file": "calendar",
+      "lines": [
+        "4月19日が返品期限……。",
+        "このPCがうちに届いた日だ。"
+      ]
+    },
+    {
+      "id": "re_private_haru",
+      "file": "private_haru",
+      "lines": [
+        "ひとりで行った……？",
+        "じゃあ、あの写真の向かいの飲み物は……。"
+      ]
+    },
+    {
+      "id": "re_private_memo",
+      "file": "private_memo",
+      "lines": [
+        "出品者は、データを消してほしくなかった……？"
+      ]
+    },
+    {
+      "id": "re_users_log",
+      "file": "users_log",
+      "lines": [
+        "yui……2016年。10年前から、このPCにいる？",
+        "misaki が「merged」された日に、自分のアカウントが作られている。"
+      ]
+    },
+    {
+      "id": "re_misaki_draft",
+      "file": "misaki_draft",
+      "lines": [
+        "ユイちゃん……？",
+        "ミサキは、ユイのことを知っていたんだ。"
+      ]
+    },
+    {
+      "id": "re_next_owner",
+      "file": "next_owner",
+      "lines": [
+        "……これを書いたのは、誰だ？",
+        "自分の名前で、署名されている。"
+      ]
+    },
+    {
+      "id": "re_notes",
+      "file": "notes",
+      "lines": [
+        "わかったことを、ここに書きとめていこう。"
+      ]
+    },
+    {
+      "id": "re_news1",
+      "file": "news1",
+      "lines": [
+        "篠原ユイ……14歳。",
+        "yui.exe の「yui」は、この子のことなのか？",
+        "亡くなったのは、午後11時47分。……時計が止まる時刻だ。"
+      ]
+    },
+    {
+      "id": "re_news2",
+      "file": "news2",
+      "lines": [
+        "亡くなった娘を、プログラムにした……？",
+        "「人と話すたびに、思い出していく」……。",
+        "篠原透、T.S。出品者と同じイニシャルだ。",
+        "このPCの中にいるのは、ユイなのか。"
+      ]
+    },
+    {
+      "id": "re_news3",
+      "file": "news3",
+      "lines": [
+        "買った人が、みんな連絡がつかなくなる……。",
+        "最後の書き込み……「ハルって子から」。",
+        "ハルは、ミサキの友達じゃなかったのか？"
+      ]
+    },
+    {
+      "id": "re_news4",
+      "file": "news4",
+      "lines": [
+        "ミサキは、4月19日からいない。",
+        "……このPCが、うちに届いた日だ。",
+        "この記事は、ミサキがいなくなったあとの日付だ。",
+        "誰が、このPCに保存したんだ。"
+      ]
+    }
+  ],
+  "hints": [
+    {
+      "id": "hi_d1_a",
+      "day": 1,
+      "idle": 35,
+      "forbidFlag": "opened_diary_1",
+      "lines": [
+        "前の持ち主のファイルが残っているみたいだ。",
+        "デスクトップの「PC」→「ユーザー」→「misaki」の中を見てみよう。"
+      ]
+    },
+    {
+      "id": "hi_d1_b",
+      "day": 1,
+      "idle": 35,
+      "requireFlag": "opened_diary_1",
+      "forbidFlag": "opened_chat",
+      "lines": [
+        "そういえば、出品者からメッセージが来ているかもしれない。",
+        "デスクトップの「メッセージ」を開いてみよう。"
+      ]
+    },
+    {
+      "id": "hi_d1_c",
+      "day": 1,
+      "idle": 35,
+      "requireFlag": "opened_diary_1,opened_chat",
+      "forbidFlag": "opened_todo",
+      "lines": [
+        "日記の近くに「やること.txt」もあった。ついでに見ておこうか。"
+      ]
+    },
+    {
+      "id": "hi_news_d1",
+      "day": 1,
+      "idle": 40,
+      "requireFlag": "opened_diary_1",
+      "forbidFlag": "opened_notes",
+      "lines": [
+        "デスクトップの「わかったこと.txt」に、気づいたことがまとまっていく。迷ったら読み返そう。"
+      ]
+    },
+    {
+      "id": "hi_d1_z",
+      "day": 1,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_1,opened_chat",
+      "lines": [
+        "今日はもう遅い。",
+        "画面左下の「Lumen OS」から、シャットダウンしよう。"
+      ]
+    },
+    {
+      "id": "hi_d2_a",
+      "day": 2,
+      "idle": 35,
+      "forbidFlag": "opened_diary_2",
+      "lines": [
+        "日記が増えている気がする。\n「ドキュメント」をもう一度見てみよう。"
+      ]
+    },
+    {
+      "id": "hi_d2_b",
+      "day": 2,
+      "idle": 35,
+      "requireFlag": "opened_diary_2",
+      "forbidFlag": "unlocked_u_kmori",
+      "lines": [
+        "日記に書いてあった数字……。",
+        "「ユーザー」の中の k.mori のフォルダ、パスワードがかかっていたな。"
+      ]
+    },
+    {
+      "id": "hi_d2_z",
+      "day": 2,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_2,unlocked_u_kmori",
+      "lines": [
+        "今日はこのくらいにしておこう。",
+        "「Lumen OS」からシャットダウンできる。"
+      ]
+    },
+    {
+      "id": "hi_d3_a",
+      "day": 3,
+      "idle": 35,
+      "forbidFlag": "opened_diary_3",
+      "lines": [
+        "今日も日記が増えているかもしれない。"
+      ]
+    },
+    {
+      "id": "hi_d3_b",
+      "day": 3,
+      "idle": 35,
+      "requireFlag": "opened_diary_3",
+      "forbidFlag": "opened_photo_room",
+      "lines": [
+        "「ピクチャ」の写真も、もう一度見ておこう。"
+      ]
+    },
+    {
+      "id": "hi_d3_c",
+      "day": 3,
+      "idle": 35,
+      "forbidFlag": "heard_haru_bd",
+      "lines": [
+        "ハルからメッセージが来ていないか、確認しよう。"
+      ]
+    },
+    {
+      "id": "hi_d3_d",
+      "day": 3,
+      "idle": 35,
+      "requireFlag": "heard_haru_bd",
+      "forbidFlag": "unlocked_private",
+      "lines": [
+        "「ドキュメント」に、鍵のかかった「private」フォルダが増えている。",
+        "……ハルの誕生日、0425。試してみるか。"
+      ]
+    },
+    {
+      "id": "hi_news_d3",
+      "day": 3,
+      "idle": 35,
+      "requireFlag": "opened_diary_3",
+      "forbidFlag": "opened_news1",
+      "lines": [
+        "「ドキュメント」に「保存したページ」というフォルダが増えている。",
+        "ミサキが何かを調べていたみたいだ。"
+      ]
+    },
+    {
+      "id": "hi_d3_z",
+      "day": 3,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_3,opened_photo_room,unlocked_private,opened_news1",
+      "lines": [
+        "……もう調べることはなさそうだ。",
+        "今日は寝よう。「Lumen OS」からシャットダウンだ。"
+      ]
+    },
+    {
+      "id": "hi_d4_a",
+      "day": 4,
+      "idle": 35,
+      "forbidFlag": "opened_diary_4",
+      "lines": [
+        "日記の続きが気になる。"
+      ]
+    },
+    {
+      "id": "hi_d4_b",
+      "day": 4,
+      "idle": 35,
+      "requireFlag": "opened_diary_4",
+      "forbidFlag": "opened_sys",
+      "lines": [
+        "このPC、見えていないファイルがある気がする。",
+        "エクスプローラーの右上で「隠しファイル」を表示できたはずだ。"
+      ]
+    },
+    {
+      "id": "hi_d4_c",
+      "day": 4,
+      "idle": 35,
+      "requireFlag": "opened_sys",
+      "forbidFlag": "opened_users_log",
+      "lines": [
+        "「system」フォルダの中を、もう少し見てみよう。"
+      ]
+    },
+    {
+      "id": "hi_news_d4",
+      "day": 4,
+      "idle": 35,
+      "requireFlag": "opened_diary_4",
+      "forbidFlag": "opened_news2",
+      "lines": [
+        "「保存したページ」に、新しい記事が増えている。"
+      ]
+    },
+    {
+      "id": "hi_d4_z",
+      "day": 4,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_4,opened_sys,opened_users_log,opened_news2",
+      "lines": [
+        "これ以上は、今日はやめておこう。",
+        "シャットダウンしよう。"
+      ]
+    },
+    {
+      "id": "hi_d5_a",
+      "day": 5,
+      "idle": 35,
+      "forbidFlag": "opened_diary_5",
+      "lines": [
+        "……日記を、確かめないと。"
+      ]
+    },
+    {
+      "id": "hi_d5_b",
+      "day": 5,
+      "idle": 35,
+      "requireFlag": "opened_diary_5",
+      "forbidFlag": "opened_noise",
+      "lines": [
+        "「ミュージック」に、見覚えのないファイルが増えている。"
+      ]
+    },
+    {
+      "id": "hi_d5_c",
+      "day": 5,
+      "idle": 35,
+      "requireFlag": "opened_noise",
+      "forbidFlag": "reversed_noise",
+      "lines": [
+        "このノイズ……逆から再生したら、何か聞こえるかもしれない。"
+      ]
+    },
+    {
+      "id": "hi_d5_memo",
+      "day": 5,
+      "idle": 35,
+      "requireFlag": "opened_diary_5",
+      "forbidFlag": "saw_memo_name",
+      "lines": [
+        "デスクトップの「かいもの.txt」……最近、見ていない。"
+      ]
+    },
+    {
+      "id": "hi_news_d5",
+      "day": 5,
+      "idle": 35,
+      "requireFlag": "opened_diary_5",
+      "forbidFlag": "opened_news3",
+      "lines": [
+        "「保存したページ」……また何か増えているかもしれない。"
+      ]
+    },
+    {
+      "id": "hi_d5_z",
+      "day": 5,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_5,reversed_noise,saw_memo_name,opened_news3",
+      "lines": [
+        "……もう、電源を切ろう。"
+      ]
+    },
+    {
+      "id": "hi_d6_a",
+      "day": 6,
+      "idle": 35,
+      "forbidFlag": "opened_diary_6",
+      "lines": [
+        "日記は、まだ続いているんだろうか。"
+      ]
+    },
+    {
+      "id": "hi_d6_b",
+      "day": 6,
+      "idle": 35,
+      "forbidFlag": "opened_misaki_draft",
+      "lines": [
+        "ゴミ箱に、何か増えていた気がする。"
+      ]
+    },
+    {
+      "id": "hi_news_d6",
+      "day": 6,
+      "idle": 35,
+      "requireFlag": "opened_diary_6",
+      "forbidFlag": "opened_news4",
+      "lines": [
+        "「保存したページ」に、日付の新しい記事がある……。"
+      ]
+    },
+    {
+      "id": "hi_d6_z",
+      "day": 6,
+      "idle": 12,
+      "repeatEvery": 60,
+      "requireFlag": "opened_diary_6,opened_misaki_draft,opened_news4",
+      "lines": [
+        "あと1日。",
+        "……シャットダウンしよう。"
+      ]
+    },
+    {
+      "id": "hi_d7_a",
+      "day": 7,
+      "idle": 30,
+      "forbidFlag": "opened_next_owner",
+      "lines": [
+        "デスクトップの「次の人へ.txt」……開いてみよう。"
+      ]
+    },
+    {
+      "id": "hi_d7",
+      "day": 7,
+      "idle": 40,
+      "repeatEvery": 90,
+      "lines": [
+        "シャットダウンすれば、この1週間が終わる。",
+        "……その前に、やり残したことはないか？"
+      ]
+    },
+    {
+      "id": "hi_yui_a",
+      "profile": "yui",
+      "idle": 30,
+      "forbidFlag": "opened_y_letter",
+      "lines": [
+        "デスクトップのテキストを読んでみよう。"
+      ]
+    },
+    {
+      "id": "hi_yui_b",
+      "profile": "yui",
+      "idle": 30,
+      "requireFlag": "opened_y_letter",
+      "lines": [
+        "……メッセージを、開いてみよう。"
+      ]
+    },
+    {
+      "id": "hi_fallback",
+      "idle": 150,
+      "repeatEvery": 150,
+      "lines": [
+        "……今日はもう遅い。",
+        "続きは明日にして、シャットダウンしようか。"
+      ]
+    }
+  ]
+}

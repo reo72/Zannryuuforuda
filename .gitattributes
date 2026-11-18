@@ -1,0 +1,19 @@
+# 改行コードを統一（Windows で編集しても差分が荒れないように）
+* text=auto
+*.cs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.unity text eol=lf merge=unityyamlmerge
+*.prefab text eol=lf merge=unityyamlmerge
+*.asset text eol=lf merge=unityyamlmerge
+*.meta text eol=lf
+
+# 画像・音・フォントはバイナリとして扱う
+*.png binary
+*.jpg binary
+*.ico binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.ttf binary
+*.otf binary

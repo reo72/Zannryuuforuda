@@ -1,0 +1,41 @@
+# ===== Unity が自動で作るもの（GitHub に上げない） =====
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# エディタ（VS Code / Visual Studio / Rider）が作るもの
+.vscode/
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ビルド成果物・クラッシュログ
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+sysinfo.txt
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

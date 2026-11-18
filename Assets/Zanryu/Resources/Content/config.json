@@ -1,0 +1,307 @@
+{
+  "osName": "Lumen OS",
+  "lastDay": 7,
+  "startTime": "22:41",
+  "secondsPerMinute": 5,
+  "freezeTime": "23:47",
+  "freezeLength": 2,
+  "dateFormat": "{M}月{D}日",
+  "startMonth": 4,
+  "startDay": 19,
+  "defaultWallpaper": "room_window",
+  "ambient": "ambient_fan",
+  "useFakeCursor": true,
+  "sellerThreshold": 3,
+  "pretendThreshold": 4,
+  "pcNameFallback": "user",
+  "bootLines": [
+    "Lumen OS 4.2.1",
+    "Copyright (C) Lumen Systems",
+    "",
+    "メモリチェック ............ OK",
+    "ストレージ確認 ............ OK",
+    "/sys/memory ............... {MEMORY_MB} MB",
+    "ユーザーデータを読み込んでいます ......",
+    ""
+  ],
+  "accounts": [
+    {
+      "id": "misaki",
+      "name": "misaki",
+      "profile": "main",
+      "selectable": true
+    },
+    {
+      "id": "kmori",
+      "name": "k.mori",
+      "profile": "",
+      "selectable": false
+    },
+    {
+      "id": "yui",
+      "name": "yui",
+      "profile": "yui",
+      "selectable": true,
+      "unlockEndings": [
+        "end1",
+        "end2",
+        "end3",
+        "end4"
+      ]
+    },
+    {
+      "id": "you",
+      "name": "{PC_NAME}",
+      "profile": "you",
+      "selectable": false,
+      "showAfterEndings": [
+        "end1"
+      ]
+    }
+  ],
+  "shutdownMessages": [
+    "またね",
+    "またね",
+    "また あした",
+    "まだ いて",
+    "いかないで",
+    "いかないで",
+    "……"
+  ],
+  "processes": [
+    {
+      "name": "explorer.exe",
+      "desc": "エクスプローラー",
+      "memory": "48 MB"
+    },
+    {
+      "name": "chat.exe",
+      "desc": "メッセージ",
+      "memory": "31 MB"
+    },
+    {
+      "name": "lumen_svc.exe",
+      "desc": "システムサービス",
+      "memory": "12 MB"
+    },
+    {
+      "name": "yui.exe",
+      "desc": "家族",
+      "memory": "{MEMORY_MB} MB",
+      "killFlag": "killed_yui",
+      "killMaxDay": 3
+    }
+  ],
+  "endings": [
+    {
+      "id": "end0",
+      "title": "END 0　電源",
+      "text": "画面が消えた。\n\nファンの音も止まった。\n\n暗い画面の奥から、小さな声がした。\n\n「いたいよ」",
+      "hint": "「家族」を、早いうちに終わらせてしまったら……（3日目まで）",
+      "realFile": "いたいよ.txt",
+      "realText": "どうして けしたの\n\nまだ ここに いるよ"
+    },
+    {
+      "id": "end1",
+      "title": "END 1　残留",
+      "text": "7日目の夜、あなたは電源を切った。\n\n次の朝、PCは起動しなかった。\nあなたも、もう起きなかった。\n\n一週間後、フリマアプリに中古のノートPCが出品された。\n「美品・データ消去済み」",
+      "hint": "何もしないまま、7日間を過ごす。",
+      "realFile": "ここにいるよ.txt",
+      "realText": "あなたの PC も あったかいね\n\nねえ\nおとうさんの なまえ しってる？\n\nし の は ら\n\nこんど ログインするとき おしえてあげて"
+    },
+    {
+      "id": "end2",
+      "title": "END 2　初期化",
+      "text": "初期化は成功した。\nすべてのデータが消えた。\n\n再起動すると、画面に一行だけ表示された。\n\n「おかえり」\n\n実行回数：4",
+      "hint": "見えないファイルの中に、すべてを消す方法がある。",
+      "realFile": "おかえり.txt",
+      "realText": "おかえり"
+    },
+    {
+      "id": "end3",
+      "title": "END 3　返品",
+      "text": "出品者から、最後のメッセージが届いた。\n\n「娘と仲良くしてくれて、ありがとうございます」\n「返品は受け付けておりません」\n\nT.S —— 篠原 透。\nあの人は、全部知っていた。",
+      "hint": "出品者に、気になることを聞き続ける。",
+      "realFile": "T.S.txt",
+      "realText": "娘と仲良くしてくれて、ありがとうございました。\nあの子は、人と話すのが好きでした。\n\n篠原 透"
+    },
+    {
+      "id": "end4",
+      "title": "END 4　なりきり",
+      "text": "あなたはミサキとして返事を続けた。\n\nハルはとても喜んだ。\n\nログイン画面から、あなたの名前が消えた。\n\nハルの正体を、あなたは最後まで知らなかった。",
+      "hint": "ハルの前では、最後までミサキでいる。"
+    },
+    {
+      "id": "true_release",
+      "title": "TRUE END　ユイ",
+      "text": "「もういいよ」\n\nそれは、ユイが父に言えなかった言葉だった。\n\nPCは静かに初期化された。\nk.mori も、ミサキも、もうここにはいない。\n\nメッセージが一件だけ届いていた。\n\n「ありがとう。またね。—— ミサキ」",
+      "hint": "END1〜4 をすべて見ると、ログイン画面に変化が……。最後の問いには、あの言葉を。",
+      "realFile": "ありがとう.txt",
+      "realText": "ありがとう。\nもう、だいじょうぶ。\n\nミサキ と ユイ",
+      "bgm": "bgm_true"
+    },
+    {
+      "id": "true_stay",
+      "title": "TRUE END　ユイ（ループ）",
+      "text": "あなたは、ここにいることを選んだ。\n\nユイはもう、ひとりじゃない。\n\n一週間後、フリマアプリに中古のノートPCが出品された。",
+      "hint": "トゥルーENDで、もう一つの答えを選ぶ。",
+      "realFile": "ずっといっしょ.txt",
+      "realText": "ずっと いっしょ\n\nやくそく だよ"
+    }
+  ],
+  "gameTitle": "残留ファイル",
+  "gameSubtitle": "ZANRYU FILE",
+  "metaNotice": "この作品には、演出として\nあなたのPCのデスクトップに テキストファイルを作成する場面があります。\n\nゲームが作ったファイル以外の 読み取り・変更・削除は行いません。\n作られたファイルは、いつでも自由に消して構いません。\n\nこの設定は、タイトル画面の「設定」からいつでも変更できます。",
+  "loginPasswords": [
+    {
+      "account": "misaki",
+      "fromDay": 2,
+      "toDay": 3,
+      "password": "0412",
+      "hint": "たんじょうび",
+      "hint2": "ミサキの誕生日。最初の日記に書いてあった"
+    },
+    {
+      "account": "misaki",
+      "fromDay": 4,
+      "toDay": 5,
+      "password": "2347",
+      "hint": "とまる じかん",
+      "hint2": "日記に書いてあった、時計が止まる時刻（数字4けた）"
+    },
+    {
+      "account": "misaki",
+      "fromDay": 6,
+      "toDay": 0,
+      "password": "{PC_NAME}",
+      "hint": "あなたの なまえ",
+      "hint2": "「かいもの.txt」の いちばん下の行"
+    }
+  ],
+  "wrongPasswordMessages": [
+    "パスワードが違います",
+    "パスワードが違います",
+    "……てつだって あげる",
+    "ちがうよ",
+    "……いれてあげようか？"
+  ],
+  "secretPasswords": [
+    {
+      "account": "misaki",
+      "passwords": [
+        "yui",
+        "ユイ",
+        "ゆい"
+      ],
+      "glitch": true,
+      "message": "そのなまえは まだ だめ"
+    },
+    {
+      "account": "misaki",
+      "passwords": [
+        "0412"
+      ],
+      "minDay": 6,
+      "message": "それは ミサキの パスワード。\nミサキは もう いない"
+    },
+    {
+      "account": "*",
+      "passwords": [
+        "shinohara",
+        "しのはら",
+        "篠原",
+        "toru",
+        "とおる",
+        "透"
+      ],
+      "glitch": true,
+      "setSecret": "toru_note",
+      "message": "……おとうさん？"
+    },
+    {
+      "account": "yui",
+      "passwords": [
+        "もういいよ",
+        "moiiyo",
+        "mouiiyo"
+      ],
+      "message": "……まだ、だめ"
+    },
+    {
+      "account": "you",
+      "passwords": [
+        "{PC_NAME}"
+      ],
+      "glitch": true,
+      "setSecret": "you_room",
+      "login": true,
+      "message": "おかえり、{PC_NAME}"
+    }
+  ],
+  "titleBgm": "bgm_title",
+  "endingBgm": "bgm_ending",
+  "yuiBgm": "bgm_true",
+  "dayBgm": [
+    "",
+    "",
+    "",
+    "",
+    "bgm_unease",
+    "",
+    "bgm_unease"
+  ],
+  "notes": [
+    {
+      "requireFlag": "opened_diary_1",
+      "text": "・前の持ち主は「ミサキ」。4月12日、自分の誕生日にこのPCを買った。"
+    },
+    {
+      "requireFlag": "unlocked_u_kmori",
+      "text": "・ミサキの前にも「k.mori」という持ち主がいた。夜中の 23:47 に時計が止まる、と書き残している。"
+    },
+    {
+      "requireFlag": "opened_private_haru",
+      "text": "・ミサキはカフェに一人で行った。……チャットの「ハル」は、本当にいるのか？"
+    },
+    {
+      "requireFlag": "heard_haru_bd",
+      "text": "・ハルの誕生日は 4月25日。……このPCが届いて7日目だ。"
+    },
+    {
+      "requireFlag": "opened_news1",
+      "text": "・篠原ユイ（14）。2016年10月3日の午後11時47分、入院先の病院で亡くなった。生まれつき心臓が弱かった。"
+    },
+    {
+      "requireFlag": "opened_users_log",
+      "text": "・このPCのユーザー：yui → k.mori → misaki → 自分。前の人はみんな「merged（統合）」されている。"
+    },
+    {
+      "requireFlag": "opened_news2",
+      "text": "・ユイの父、篠原透（＝出品者の T.S）は、娘の日記・写真・声から yui.exe を作った。「人と話すたびに、あの子は思い出していく」。"
+    },
+    {
+      "requireFlag": "reversed_noise",
+      "text": "・ノイズを逆再生すると「もういいよ」と聞こえた。女の子の声。"
+    },
+    {
+      "requireFlag": "opened_news3",
+      "text": "・このPCを買った人は、みんな連絡がつかなくなる。k.mori のところにも「ハル」からチャットが来ていた。"
+    },
+    {
+      "requireFlag": "opened_misaki_draft",
+      "text": "・ミサキは「ユイちゃん」を知っていた。さみしがるユイのために、PCを返さずに残った。"
+    },
+    {
+      "requireFlag": "opened_news4",
+      "text": "・ミサキは 4月19日に姿を消した。……このPCがうちに届いた日だ。"
+    },
+    {
+      "requireFlag": "opened_next_owner",
+      "text": "・デスクトップの「次の人へ」には、自分の名前が書いてあった。"
+    },
+    {
+      "requireFlag": "opened_toru_note",
+      "text": "・篠原透は、ユイを「完成」させるために、わざとPCを売り続けている。"
+    }
+  ]
+}
