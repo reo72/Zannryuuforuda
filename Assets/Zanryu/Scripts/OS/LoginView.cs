@@ -134,6 +134,16 @@ namespace Zanryu
                 var yesterday = PasswordFor(a, day - 1);
                 if (day > 1 && (yesterday == null || yesterday.password != currentPw.password))
                     info.text = "パスワードが変更されました";
+
+                // 2周目以降（END を1つでも見た）は、メインのアカウントのパスワードを覚えている扱い
+                bool mainAccount = string.IsNullOrEmpty(a.profile) || a.profile == "main";
+                if (mainAccount && gm.Global.endings.Count > 0)
+                {
+                    var pw = TextResolver.Resolve(currentPw.password);
+                    input.text = pw;
+                    input.caretPosition = pw.Length;
+                    hintText.text = $"覚えているパスワード：{pw}（Enter でログイン）";
+                }
             }
             input.ActivateInputField();
         }

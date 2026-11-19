@@ -109,6 +109,14 @@ namespace Zanryu
         IEnumerator BootRoutine()
         {
             ClearAll();
+            var gmb = GameManager.I;
+            if (gmb.State.profile == "main" && gmb.State.day == 1 && !gmb.HasFlag("seen_prologue"))
+            {
+                yield return PrologueRoutine();
+                gmb.State.flags.Add("seen_prologue");
+                gmb.Save();
+                ClearAll();
+            }
             PlayBgm(null, 1f);
             PlaySound("boot", 0.8f);
             var bg = UIKit.Panel(ScreenLayer, Color.black, "Boot");
@@ -123,6 +131,82 @@ namespace Zanryu
             }
             yield return new WaitForSeconds(0.8f);
             ShowLogin();
+        }
+
+        // ---------- 導入（はじめて起動する前に1回だけ） ----------
+        IEnumerator PrologueRoutine()
+        {
+            var cfg = Content.Config;
+            if (cfg.prologue.Count == 0 && string.IsNullOrEmpty(cfg.howToPlay)) yield break;
+            PlayBgm(null, 1.5f);
+
+            var bg = UIKit.Panel(ScreenLayer, Color.black, "Prologue");
+            UIKit.Stretch(bg.rectTransform);
+            bool clicked = false, skip = false;
+            var catcher = UIKit.Button(bg.transform, "", () => clicked = true, new Color(0, 0, 0, 0), Color.clear, 10);
+            UIKit.Stretch((RectTransform)catcher.transform);
+
+            var line = UIKit.Label(bg.transform, "", 30, new Color(0.86f, 0.86f, 0.88f), TextAnchor.MiddleCenter);
+            UIKit.Place(line.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 40), new Vector2(1500, 300));
+            line.lineSpacing = 14;
+            line.raycastTarget = false;
+            var next = UIKit.Label(bg.transform, "クリック / Space で進む", 16, new Color(1, 1, 1, 0.35f), TextAnchor.MiddleCenter);
+            UIKit.Place(next.rectTransform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 70), new Vector2(600, 30));
+            next.raycastTarget = false;
+            var skipBtn = UIKit.Button(bg.transform, "スキップ ▶▶", () => skip = true, new Color(1, 1, 1, 0.08f), new Color(1, 1, 1, 0.6f), 16);
+            UIKit.Place((RectTransform)skipBtn.transform, new Vector2(1, 0), new Vector2(1, 0), new Vector2(-30, 30), new Vector2(160, 40));
+
+            // 最初に「イヤホン推奨」
+            if (!string.IsNullOrEmpty(cfg.earphoneNotice))
+            {
+                line.text = TextResolver.Resolve(cfg.earphoneNotice);
+                for (float t = 0; t < 1f && !skip; t += Time.deltaTime / 0.8f) { line.alpha = t; yield return null; }
+                line.alpha = 1;
+                for (float w = 0; w < 2.8f && !skip && !clicked && !InputCompat.AdvancePressed(); w += Time.deltaTime) yield return null;
+                for (float t = 1; t > 0 && !skip; t -= Time.deltaTime / 0.6f) { line.alpha = t; yield return null; }
+                line.alpha = 0;
+                clicked = false;
+                yield return new WaitForSeconds(0.4f);
+            }
+
+            foreach (var raw in cfg.prologue)
+            {
+                if (skip) break;
+                line.text = TextResolver.Resolve(raw);
+                for (float t = 0; t < 1f; t += Time.deltaTime / 0.9f)
+                {
+                    line.alpha = t;
+                    if (skip) break;
+                    yield return null;
+                }
+                line.alpha = 1;
+                clicked = false;
+                while (!clicked && !skip && !InputCompat.AdvancePressed()) yield return null;
+                for (float t = 1; t > 0 && !skip; t -= Time.deltaTime / 0.5f) { line.alpha = t; yield return null; }
+                line.alpha = 0;
+                yield return new WaitForSeconds(0.25f);
+            }
+            Destroy(catcher.gameObject);
+            Destroy(skipBtn.gameObject);
+            line.text = "";
+            next.text = "";
+
+            if (!string.IsNullOrEmpty(cfg.howToPlay))
+            {
+                var card = UIKit.Panel(bg.transform, new Color(0.09f, 0.10f, 0.12f), "HowToPlay");
+                UIKit.Place(card.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1180, 760));
+                var head = UIKit.Label(card.transform, TextResolver.Resolve(cfg.howToPlayTitle), 32, Theme.TextLight, TextAnchor.MiddleLeft);
+                UIKit.Place(head.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(56, -40), new Vector2(1060, 56));
+                var body = UIKit.Label(card.transform, TextResolver.Resolve(cfg.howToPlay), 21, new Color(0.82f, 0.83f, 0.86f), TextAnchor.UpperLeft);
+                UIKit.Place(body.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(56, -116), new Vector2(1070, 520));
+                body.lineSpacing = 10;
+                bool go = false;
+                var start = UIKit.Button(card.transform, "PC を起動する", () => go = true, Theme.Accent, Color.white, 20);
+                UIKit.Place((RectTransform)start.transform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 40), new Vector2(320, 56));
+                yield return new WaitUntil(() => go);
+            }
+            Destroy(bg.gameObject);
+            yield return new WaitForSeconds(0.6f);
         }
 
         public void ShowLogin()

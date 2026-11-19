@@ -66,6 +66,12 @@ namespace Zanryu
             MenuButton("設定", ShowSettings);
             MenuButton("おわる", Quit);
 
+            if (!string.IsNullOrEmpty(Content.Config.earphoneNotice))
+            {
+                var ear = UIKit.Label(root, TextResolver.Resolve(Content.Config.earphoneNotice).Replace("\n", "　"), 16, new Color(1, 1, 1, 0.45f), TextAnchor.LowerLeft);
+                UIKit.Place(ear.rectTransform, new Vector2(0, 0), new Vector2(0, 0), new Vector2(24, 16), new Vector2(900, 24));
+            }
+
             var ver = UIKit.Label(root, $"v{Application.version}", 14, new Color(1, 1, 1, 0.3f), TextAnchor.LowerRight);
             UIKit.Place(ver.rectTransform, new Vector2(1, 0), new Vector2(1, 0), new Vector2(-20, 16), new Vector2(300, 24));
         }
@@ -149,14 +155,21 @@ namespace Zanryu
                 {
                     var body = UIKit.Label(card.transform, TextResolver.Resolve(e.text), 16, new Color(0.74f, 0.75f, 0.78f));
                     body.lineSpacing = 4;
+                    // メタ演出を OFF にしているときは「残されたファイル」をここで見せる
+                    if (!RealDesktop.Enabled && !string.IsNullOrEmpty(e.realFile))
+                    {
+                        var rf = UIKit.Label(card.transform, $"――　残されたファイル「{e.realFile}」\n" + TextResolver.Resolve(e.realText),
+                            16, new Color(0.85f, 0.55f, 0.55f));
+                        rf.lineSpacing = 4;
+                    }
                 }
                 else if (!string.IsNullOrEmpty(e.hint))
                 {
                     // ヒントは、押したときだけ表示する（ネタバレを見たくない人のため）
-                    var hint = UIKit.Label(card.transform, "ヒント：" + e.hint, 16, new Color(0.62f, 0.56f, 0.44f));
-                    hint.gameObject.SetActive(false);
                     var toggle = UIKit.Label(card.transform, "▶ ヒントを表示", 15, new Color(0.45f, 0.62f, 0.85f));
                     toggle.raycastTarget = true;
+                    var hint = UIKit.Label(card.transform, "ヒント：" + e.hint, 16, new Color(0.62f, 0.56f, 0.44f));
+                    hint.gameObject.SetActive(false);
                     var click = toggle.gameObject.AddComponent<ClickHandler>();
                     click.Single = () =>
                     {

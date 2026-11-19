@@ -387,6 +387,236 @@
           "a": "room_window_d7"
         }
       ]
+    },
+    {
+      "id": "h1_knock",
+      "trigger": "timer",
+      "day": 1,
+      "delay": 95,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "knock",
+          "f": 0.55
+        },
+        {
+          "type": "wait",
+          "f": 2.5
+        },
+        {
+          "type": "sayAsync",
+          "a": "……？ 今の、玄関？　……気のせいか。"
+        }
+      ]
+    },
+    {
+      "id": "h2_folder",
+      "trigger": "timer",
+      "day": 2,
+      "delay": 70,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "static",
+          "f": 0.5
+        },
+        {
+          "type": "glitch",
+          "f": 0.15
+        },
+        {
+          "type": "open",
+          "a": "music"
+        },
+        {
+          "type": "wait",
+          "f": 1.2
+        },
+        {
+          "type": "say",
+          "a": "……開いた覚えのないフォルダだ。"
+        },
+        {
+          "type": "say",
+          "a": "中は、空っぽ。"
+        }
+      ]
+    },
+    {
+      "id": "h3_knock",
+      "trigger": "timer",
+      "day": 3,
+      "delay": 110,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "knock",
+          "f": 0.9
+        },
+        {
+          "type": "wait",
+          "f": 3
+        },
+        {
+          "type": "say",
+          "a": "……ノックの音。"
+        },
+        {
+          "type": "say",
+          "a": "誰か来る予定なんて、ない。"
+        }
+      ]
+    },
+    {
+      "id": "h4_note",
+      "trigger": "timer",
+      "day": 4,
+      "delay": 35,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "static",
+          "f": 0.4
+        },
+        {
+          "type": "flag",
+          "a": "ghost_note1"
+        }
+      ]
+    },
+    {
+      "id": "h4_note_seen",
+      "trigger": "fileOpened",
+      "target": "notes",
+      "requireFlag": "ghost_note1",
+      "delay": 1.5,
+      "actions": [
+        {
+          "type": "say",
+          "a": "……いちばん下の行。"
+        },
+        {
+          "type": "say",
+          "a": "こんなこと、書いてない。"
+        }
+      ]
+    },
+    {
+      "id": "h5_breath",
+      "trigger": "timer",
+      "day": 5,
+      "delay": 90,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "breath",
+          "f": 0.8
+        },
+        {
+          "type": "wait",
+          "f": 3.5
+        },
+        {
+          "type": "say",
+          "a": "……今、すぐ後ろで。"
+        },
+        {
+          "type": "say",
+          "a": "息の音が、した。"
+        }
+      ]
+    },
+    {
+      "id": "h5_mail",
+      "trigger": "timer",
+      "day": 5,
+      "delay": 150,
+      "actions": [
+        {
+          "type": "toast",
+          "a": "新着メール\n差出人：（なし）\n件名：うしろ"
+        }
+      ]
+    },
+    {
+      "id": "h6_refuse",
+      "trigger": "flag",
+      "target": "shutdown_refused",
+      "actions": [
+        {
+          "type": "sound",
+          "a": "error",
+          "f": 1
+        },
+        {
+          "type": "glitch",
+          "f": 0.35
+        },
+        {
+          "type": "message",
+          "a": "Lumen OS",
+          "b": "シャットダウンできません。\n\nまだ だめ"
+        },
+        {
+          "type": "say",
+          "a": "……シャットダウンが、拒否された。"
+        },
+        {
+          "type": "say",
+          "a": "もう一度、やってみるしかない。"
+        }
+      ]
+    },
+    {
+      "id": "h6_rename",
+      "trigger": "timer",
+      "day": 6,
+      "delay": 50,
+      "actions": [
+        {
+          "type": "glitch",
+          "f": 0.2
+        },
+        {
+          "type": "rename",
+          "a": "notes",
+          "b": "わたしのこと.txt"
+        },
+        {
+          "type": "flag",
+          "a": "ghost_note2"
+        }
+      ]
+    },
+    {
+      "id": "h7_knock",
+      "trigger": "timer",
+      "day": 7,
+      "delay": 40,
+      "actions": [
+        {
+          "type": "sound",
+          "a": "knock_hard",
+          "f": 1
+        },
+        {
+          "type": "wait",
+          "f": 2.8
+        },
+        {
+          "type": "sound",
+          "a": "knock_hard",
+          "f": 1
+        },
+        {
+          "type": "wait",
+          "f": 3
+        },
+        {
+          "type": "say",
+          "a": "……やめて。"
+        }
+      ]
     }
   ]
 }

@@ -156,6 +156,7 @@ namespace Zanryu
         public float idle;         // hints 用：何もせずにこの秒数たったら表示
         public float repeatEvery;  // hints 用：0 より大きいと、この秒数ごとに何度でも出る（シャットダウンの催促など）
         public string speaker;     // 名前欄（空なら名前なし＝主人公）
+        public bool requireMeta;   // メタ演出（実機デスクトップにファイル）が有効なときだけ
         public List<string> lines = new List<string>(); // 1 要素 = 1 ページ
     }
 
@@ -322,5 +323,10 @@ namespace Zanryu
         public List<SecretPassword> secretPasswords = new List<SecretPassword>();
         public string metaNotice = "";
         public List<NoteDef> notes = new List<NoteDef>();  // 「わかったこと」メモ（{NOTES} で一覧になる）
+        public List<string> prologue = new List<string>();  // はじめてPCを起動する前に流れる導入文
+        public int refuseShutdownDay;                       // この日、最初のシャットダウンは拒否される（フラグ shutdown_refused が立つ）
+        public string earphoneNotice = "";                  // タイトルと導入の最初に出す「イヤホン推奨」
+        public string howToPlayTitle = "";
+        public string howToPlay = "";                       // 導入文のあとに出る「遊び方」
     }
 }

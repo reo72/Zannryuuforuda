@@ -285,6 +285,12 @@ namespace Zanryu
         public void RequestShutdown()
         {
             if (!InDesktop || endingRunning) return;
+            // 演出：決められた日の最初のシャットダウンは、PC に拒否される
+            if (State.profile == "main" && State.day == Content.Config.refuseShutdownDay && !HasFlag("shutdown_refused"))
+            {
+                SetFlag("shutdown_refused");
+                return;
+            }
             StartCoroutine(ShutdownRoutine());
         }
 

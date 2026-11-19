@@ -42,6 +42,7 @@ namespace Zanryu
             if (e.day > 0 && e.day != day) return false;
             if (e.minDay > 0 && day < e.minDay) return false;
             if (e.maxDay > 0 && day > e.maxDay) return false;
+            if (e.requireMeta && !RealDesktop.Enabled) return false;
             return gm.RequireOk(e.requireFlag) && gm.ForbidOk(e.forbidFlag);
         }
 
